@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aflal Ahamed | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-black">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-8 left-1/2 transform -translate-x-1/2 z-50">
+        <div class="bg-black rounded-full px-8 py-4 flex items-center gap-8 shadow-2xl">
+            <div class="w-8 h-8 bg-white transform rotate-45"></div>
+            <a href="#home" class="text-white hover:text-gray-300 font-medium">AFLAL</a>
+            <a href="#works" class="text-white hover:text-gray-300 font-medium">WORKS</a>
+            <a href="#skills" class="text-white hover:text-gray-300 font-medium">SKILLS</a>
+            <a href="#education" class="text-white hover:text-gray-300 font-medium">EDUCATION</a>
+            <a href="#contact" class="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-200 font-medium">CONTACT ME</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center px-4 md:px-8 lg:px-16 pt-40">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="inline-block bg-gray-100 px-6 py-3 rounded-full mb-8 md:mb-12 text-xs md:text-sm font-medium tracking-wide">
+                        A SOFTWARE ENGINEER BASED IN SRI LANKA
+                    </div>
+                    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-bold leading-tight mb-8 md:mb-12">
+                        AFLAL<br/>AHAMED
+                    </h1>
+                    <p class="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 md:mb-12 leading-relaxed">
+                        Computer Science Student | Full-Stack Developer<br/>
+                        Machine Learning Enthusiast
+                    </p>
+                    <a href="#contact" class="inline-block bg-black text-white px-8 md:px-12 py-3 md:py-4 rounded-full text-base md:text-lg font-medium hover:bg-gray-800 transition-colors w-full sm:w-auto text-center">
+                        GET IN TOUCH
+                    </a>
+                </div>
+                
+                <div class="order-1 lg:order-2 flex flex-col items-center">
+                    <div class="relative mb-8">
+                        <div class="w-64 h-96 sm:w-72 sm:h-[26rem] bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl overflow-hidden border-4 border-gray-300 shadow-2xl">
+                            <!-- Replace with your photo -->
+                            <img src="images/profile.jpg" alt="Aflal Ahamed" class="w-full h-full object-cover hidden" id="profilePhoto">
+                            <!-- Placeholder (shows when no photo) -->
+                            <div class="w-full h-full flex items-center justify-center" id="photoPlaceholder">
+                                <div class="text-center">
+                                    <div class="w-28 h-28 sm:w-36 sm:h-36 mx-auto mb-4 bg-gray-300 rounded-full flex items-center justify-center">
+                                        <span class="text-4xl sm:text-5xl font-bold text-gray-500">AA</span>
+                                    </div>
+                                    <p class="text-gray-400 text-xs sm:text-sm">Your Photo Here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Stats Mobile -->
+                    <div class="grid grid-cols-3 gap-3 sm:gap-4 w-full max-w-sm lg:hidden mb-8">
+                        <div class="bg-white p-4 rounded-xl shadow-lg text-center">
+                            <div class="text-2xl sm:text-3xl font-bold mb-1">2+</div>
+                            <div class="text-xs text-gray-600">Years</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-lg text-center">
+                            <div class="text-2xl sm:text-3xl font-bold mb-1">6+</div>
+                            <div class="text-xs text-gray-600">Projects</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-lg text-center">
+                            <div class="text-2xl sm:text-3xl font-bold mb-1">99.8%</div>
+                            <div class="text-xs text-gray-600">Accuracy</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Education -->
+                    <div class="text-center">
+                        <p class="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4 font-medium">EDUCATION</p>
+                        <div class="flex items-start justify-center gap-3 sm:gap-6">
+                            <div class="flex flex-col items-center">
+                                <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gray-100 rounded-xl flex items-center justify-center border-2 border-gray-200 hover:border-gray-400 transition-colors mb-2 overflow-hidden">
+                                    <img src="/images/iit.png" alt="IIT" class="w-full h-full object-contain p-2 hidden" id="iitLogo">
+                                    <span class="text-xs font-bold text-gray-400" id="iitPlaceholder">IIT</span>
+                                </div>
+                                <span class="text-xs text-gray-400 font-medium">UNI</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gray-100 rounded-xl flex items-center justify-center border-2 border-gray-200 hover:border-gray-400 transition-colors mb-2 overflow-hidden">
+                                    <img src="../images/uow.png" alt="UoW" class="w-full h-full object-contain p-2 hidden" id="uowLogo">
+                                    <span class="text-xs font-bold text-gray-400" id="uowPlaceholder">UoW</span>
+                                </div>
+                                <span class="text-xs text-gray-400 font-medium">UNI</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gray-100 rounded-xl flex items-center justify-center border-2 border-gray-200 hover:border-gray-400 transition-colors mb-2 overflow-hidden">
+                                    <img src="/images/zcc.jpeg" alt="ZCC" class="w-full h-full object-contain p-2 hidden" id="zccLogo">
+                                    <span class="text-xs font-bold text-gray-400" id="zccPlaceholder">ZCC</span>
+                                </div>
+                                <span class="text-xs text-gray-400 font-medium">SCHOOL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-32 px-8 md:px-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-6xl font-bold mb-8">ABOUT ME</h2>
+                    <div class="w-20 h-1 bg-black mb-8"></div>
+                </div>
+                <div class="space-y-6 text-lg leading-relaxed text-gray-700">
+                    <p>I'm a software and web development professional pursuing a Computer Science degree at IIT - University of Westminster. I specialize in machine learning, data science, and algorithmic problem-solving.</p>
+                    <p>With expertise in multiple programming languages and frameworks, I build full-stack applications and implement advanced ML algorithms to create innovative data-driven solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="works" class="py-32 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-6xl font-bold mb-4">SELECTED WORKS</h2>
+                <div class="w-20 h-1 bg-black mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-50 rounded-2xl overflow-hidden mb-4 aspect-video flex items-center justify-center hover:bg-gray-100 transition-colors">
+                        <span class="text-3xl font-bold text-gray-300">01</span>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-bold">AI-Based Financial Manager</h3>
+                        <p class="text-xs text-gray-500">Dec 2024 - May 2025</p>
+                        <p class="text-sm text-gray-600 leading-relaxed">A student finance application that uses machine learning to provide intelligent financial insights and recommendations.</p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">React</span>
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">Node.js</span>
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">MongoDB</span>
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">Python ML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-50 rounded-2xl overflow-hidden mb-4 aspect-video flex items-center justify-center hover:bg-gray-100 transition-colors">
+                        <span class="text-3xl font-bold text-gray-300">02</span>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-bold">Real-Time Event Ticketing System</h3>
+                        <p class="text-xs text-gray-500">Oct - Dec 2024</p>
+                        <p class="text-sm text-gray-600 leading-relaxed">High-performance ticketing platform with 99.8% booking accuracy and real-time seat selection.</p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">Spring Boot</span>
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">React</span>
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-50 rounded-2xl overflow-hidden mb-4 aspect-video flex items-center justify-center hover:bg-gray-100 transition-colors">
+                        <span class="text-3xl font-bold text-gray-300">03</span>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-bold">Breast Cancer Prediction System</h3>
+                        <p class="text-xs text-gray-500">2025</p>
+                        <p class="text-sm text-gray-600 leading-relaxed">ML system using ensemble methods to predict mortality rates with high accuracy metrics.</p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">scikit-learn</span>
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">Pandas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-50 rounded-2xl overflow-hidden mb-4 aspect-video flex items-center justify-center hover:bg-gray-100 transition-colors">
+                        <span class="text-3xl font-bold text-gray-300">04</span>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-bold">RESTful Bookstore API</h3>
+                        <p class="text-xs text-gray-500">2025</p>
+                        <p class="text-sm text-gray-600 leading-relaxed">Comprehensive backend API for e-commerce with full CRUD operations and authentication.</p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">JAX-RS</span>
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">Java</span>
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">Postman</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-50 rounded-2xl overflow-hidden mb-4 aspect-video flex items-center justify-center hover:bg-gray-100 transition-colors">
+                        <span class="text-3xl font-bold text-gray-300">05</span>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-bold">University Progression Predictor</h3>
+                        <p class="text-xs text-gray-500">Oct - Nov 2023</p>
+                        <p class="text-sm text-gray-600 leading-relaxed">Award-winning ML model classifying student progression outcomes with high accuracy.</p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-50 rounded-2xl overflow-hidden mb-4 aspect-video flex items-center justify-center hover:bg-gray-100 transition-colors">
+                        <span class="text-3xl font-bold text-gray-300">06</span>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-bold">Health Education Platform</h3>
+                        <p class="text-xs text-gray-500">2024</p>
+                        <p class="text-sm text-gray-600 leading-relaxed">Responsive web platform with user authentication and interactive content delivery.</p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">HTML5</span>
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">CSS3</span>
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-32 px-8 md:px-16 bg-black text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-6xl font-bold mb-4">EXPERTISE</h2>
+                <div class="w-20 h-1 bg-white mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <div class="text-center p-8 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+                    <i data-lucide="code-2" class="w-12 h-12 mx-auto mb-4"></i>
+                    <h3 class="text-lg font-semibold">JavaScript/TypeScript</h3>
+                </div>
+                <div class="text-center p-8 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+                    <i data-lucide="code-2" class="w-12 h-12 mx-auto mb-4"></i>
+                    <h3 class="text-lg font-semibold">Python</h3>
+                </div>
+                <div class="text-center p-8 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+                    <i data-lucide="code-2" class="w-12 h-12 mx-auto mb-4"></i>
+                    <h3 class="text-lg font-semibold">Java</h3>
+                </div>
+                <div class="text-center p-8 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+                    <i data-lucide="code-2" class="w-12 h-12 mx-auto mb-4"></i>
+                    <h3 class="text-lg font-semibold">React.js</h3>
+                </div>
+                <div class="text-center p-8 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+                    <i data-lucide="server" class="w-12 h-12 mx-auto mb-4"></i>
+                    <h3 class="text-lg font-semibold">Node.js</h3>
+                </div>
+                <div class="text-center p-8 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+                    <i data-lucide="database" class="w-12 h-12 mx-auto mb-4"></i>
+                    <h3 class="text-lg font-semibold">MongoDB</h3>
+                </div>
+                <div class="text-center p-8 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+                    <i data-lucide="database" class="w-12 h-12 mx-auto mb-4"></i>
+                    <h3 class="text-lg font-semibold">MySQL</h3>
+                </div>
+                <div class="text-center p-8 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+                    <i data-lucide="brain" class="w-12 h-12 mx-auto mb-4"></i>
+                    <h3 class="text-lg font-semibold">Machine Learning</h3>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Frontend</h4>
+                    <p class="text-gray-400">React.js, Next.js, HTML5, CSS3</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Backend</h4>
+                    <p class="text-gray-400">Node.js, Express.js, Spring Boot</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Data Science</h4>
+                    <p class="text-gray-400">scikit-learn, Pandas, NumPy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-32 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-6xl font-bold mb-4">EDUCATION</h2>
+                <div class="w-20 h-1 bg-black mx-auto"></div>
+            </div>
+
+            <div class="space-y-12">
+                <div class="border-l-4 border-black pl-8 py-4">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="text-3xl font-bold mb-2">Bachelor's Degree in Computer Science</h3>
+                            <p class="text-xl text-gray-600">IIT - University of Westminster</p>
+                        </div>
+                        <span class="text-lg font-medium mt-2 md:mt-0">2023 - Present</span>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-gray-600 font-medium">Relevant Coursework:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-gray-100 text-sm rounded-full">Client-Server Architectures</span>
+                            <span class="px-4 py-2 bg-gray-100 text-sm rounded-full">Machine Learning & Data Mining</span>
+                            <span class="px-4 py-2 bg-gray-100 text-sm rounded-full">Algorithms & Data Structures</span>
+                            <span class="px-4 py-2 bg-gray-100 text-sm rounded-full">Database Systems</span>
+                            <span class="px-4 py-2 bg-gray-100 text-sm rounded-full">Software Engineering</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-l-4 border-gray-300 pl-8 py-4">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">GCE Advanced Level - Physical Science</h3>
+                            <p class="text-lg text-gray-600">Mathematics, Physics, Chemistry</p>
+                        </div>
+                        <span class="text-lg font-medium mt-2 md:mt-0">2021</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 px-8 md:px-16 bg-black text-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-5xl md:text-7xl font-bold mb-8">LET'S WORK<br/>TOGETHER</h2>
+            <p class="text-xl text-gray-400 mb-4">40/1 Hill Street, Colombo</p>
+            <p class="text-xl text-gray-400 mb-12">ahamedaflal100@gmail.com</p>
+            
+            <div class="flex justify-center gap-6 mb-12">
+                <a href="https://github.com/aflal123" target="_blank" class="w-14 h-14 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/aflal-ahamed2002/" target="_blank" class="w-14 h-14 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
+                    <i data-lucide="linkedin" class="w-6 h-6"></i>
+                </a>
+                <a href="mailto:ahamedaflal100@gmail.com" class="w-14 h-14 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                </a>
+            </div>
+
+            <a href="mailto:ahamedaflal100@gmail.com" class="inline-block bg-white text-black px-12 py-4 rounded-full text-lg font-medium hover:bg-gray-200 transition-colors">
+                GET IN TOUCH
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-8 md:px-16 bg-black text-white border-t border-white/10">
+        <div class="max-w-7xl mx-auto text-center text-gray-400">
+            <p>&copy; 2024 Aflal Ahamed. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
