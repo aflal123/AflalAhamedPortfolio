@@ -11,68 +11,79 @@
 <body class="bg-white text-black">
     
     <!-- Navigation -->
-    <nav class="fixed top-8 left-1/2 transform -translate-x-1/2 z-50">
-        <div class="bg-black rounded-full px-8 py-4 flex items-center gap-8 shadow-2xl">
-            <div class="w-8 h-8 bg-white transform rotate-45"></div>
-            <a href="#home" class="text-white hover:text-gray-300 font-medium">AFLAL</a>
-            <a href="#works" class="text-white hover:text-gray-300 font-medium">WORKS</a>
-            <a href="#skills" class="text-white hover:text-gray-300 font-medium">SKILLS</a>
-            <a href="#education" class="text-white hover:text-gray-300 font-medium">EDUCATION</a>
-            <a href="#contact" class="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-200 font-medium">CONTACT ME</a>
+    <nav class="fixed top-4 inset-x-0 mx-auto max-w-7xl px-4 z-50 md:top-8">
+        <div class="bg-black rounded-full px-4 py-3 flex items-center justify-between shadow-2xl md:px-8 md:py-4 md:gap-8">
+            <div class="flex items-center gap-4">
+                <div class="w-6 h-6 bg-white transform rotate-45 md:w-8 md:h-8"></div>
+                <a href="#home" class="text-white hover:text-gray-300 font-medium">AFLAL</a>
+            </div>
+            
+            <button id="menu-toggle" class="text-white md:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+            
+            <div id="menu" class="hidden absolute top-full left-0 right-0 bg-black rounded-b-3xl shadow-2xl overflow-hidden md:relative md:flex md:items-center md:gap-12 md:top-auto md:left-auto md:right-auto md:bg-transparent md:rounded-none md:shadow-none md:overflow-visible">
+                <div class="flex flex-col md:flex-row md:gap-12">
+                    <a href="#works" class="text-white hover:text-gray-300 font-medium px-6 py-4 md:px-0 md:py-0 md:pt-1">WORKS</a>
+                    <a href="#skills" class="text-white hover:text-gray-300 font-medium px-6 py-4 md:px-0 md:py-0 md:pt-1">SKILLS</a>
+                    <a href="#education" class="text-white hover:text-gray-300 font-medium px-6 py-4 md:px-0 md:py-0 md:pt-1">EDUCATION</a>
+                    <a href="#contact" class="bg-white text-black px-6 py-4 rounded-t-none md:rounded-full hover:bg-gray-200 font-medium md:px-6 md:py-2 md:ml-4">CONTACT ME</a>
+                </div>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center px-4 md:px-8 lg:px-16 pt-40">
+    <section id="home" class="min-h-screen flex items-center px-4 md:px-8 lg:px-16 pt-24 md:pt-40">
         <div class="max-w-7xl mx-auto w-full">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="order-2 lg:order-1">
-                    <div class="inline-block bg-gray-100 px-6 py-3 rounded-full mb-8 md:mb-12 text-xs md:text-sm font-medium tracking-wide">
-                        A SOFTWARE ENGINEER BASED IN SRI LANKA
+                    <div class="inline-block bg-gray-100 px-4 py-2 rounded-full mb-6 md:mb-12 text-xs font-medium tracking-wide md:px-6 md:py-3 md:text-sm">
+                        SOFTWARE ENGINEER INTERN | TECHNOLOGY ENTHUSIAST | PROBLEM SOLVER
                     </div>
-                    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-bold leading-tight mb-8 md:mb-12">
+                    <h1 class="text-4xl font-bold leading-tight mb-6 md:text-7xl md:mb-12 lg:text-9xl">
                         AFLAL<br/>AHAMED
                     </h1>
-                    <p class="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 md:mb-12 leading-relaxed">
+                    <p class="text-base text-gray-600 mb-6 leading-relaxed md:text-2xl md:mb-12">
                         Computer Science Student | Full-Stack Developer<br/>
                         Machine Learning Enthusiast
                     </p>
-                    <a href="#contact" class="inline-block bg-black text-white px-8 md:px-12 py-3 md:py-4 rounded-full text-base md:text-lg font-medium hover:bg-gray-800 transition-colors w-full sm:w-auto text-center">
+                    <a href="#contact" class="inline-block bg-black text-white px-6 py-3 rounded-full text-base font-medium hover:bg-gray-800 transition-colors w-full sm:w-auto text-center md:px-12 md:py-4 md:text-lg">
                         GET IN TOUCH
                     </a>
                 </div>
                 
                 <div class="order-1 lg:order-2 flex flex-col items-center">
                     <div class="relative mb-8">
-                        <div class="w-64 h-96 sm:w-72 sm:h-[26rem] bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl overflow-hidden border-4 border-gray-300 shadow-2xl">
+                        <div class="w-48 h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl overflow-hidden border-4 border-gray-300 shadow-2xl sm:w-72 sm:h-[26rem] md:w-64 md:h-96">
                             <!-- Profile Photo -->
                             <img src="images/afla.png" alt="Aflal Ahamed" class="w-full h-full object-cover">
                         </div>
                     </div>
                     
                     <!-- Stats Mobile -->
-                    <div class="grid grid-cols-3 gap-3 sm:gap-4 w-full max-w-sm lg:hidden mb-8">
-                        <div class="bg-white p-4 rounded-xl shadow-lg text-center">
-                            <div class="text-2xl sm:text-3xl font-bold mb-1">2+</div>
+                    <div class="grid grid-cols-3 gap-2 w-full max-w-xs sm:max-w-sm lg:hidden mb-6 sm:gap-4 sm:mb-8">
+                        <div class="bg-white p-3 rounded-xl shadow-lg text-center sm:p-4">
+                            <div class="text-xl font-bold mb-1 sm:text-3xl">2+</div>
                             <div class="text-xs text-gray-600">Years</div>
                         </div>
-                        <div class="bg-white p-4 rounded-xl shadow-lg text-center">
-                            <div class="text-2xl sm:text-3xl font-bold mb-1">6+</div>
+                        <div class="bg-white p-3 rounded-xl shadow-lg text-center sm:p-4">
+                            <div class="text-xl font-bold mb-1 sm:text-3xl">6+</div>
                             <div class="text-xs text-gray-600">Projects</div>
                         </div>
-                        <div class="bg-white p-4 rounded-xl shadow-lg text-center">
-                            <div class="text-2xl sm:text-3xl font-bold mb-1">99.8%</div>
+                        <div class="bg-white p-3 rounded-xl shadow-lg text-center sm:p-4">
+                            <div class="text-xl font-bold mb-1 sm:text-3xl">99.8%</div>
                             <div class="text-xs text-gray-600">Accuracy</div>
                         </div>
                     </div>
                     
                     <!-- Education Logos -->
                     <div class="text-center">
-                        <p class="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4 font-medium">EDUCATION</p>
+                        <p class="text-xs text-gray-500 mb-2 font-medium sm:text-sm sm:mb-4">EDUCATION</p>
                         <div class="flex items-start justify-center gap-3 sm:gap-6">
                             <!-- IIT Logo -->
                             <div class="flex flex-col items-center">
-                                <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-xl flex items-center justify-center border-2 border-gray-200 hover:border-gray-400 transition-colors mb-2 overflow-hidden p-2">
+                                <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center border-2 border-gray-200 hover:border-gray-400 transition-colors mb-2 overflow-hidden p-2 sm:w-16 sm:h-16">
                                     <img src="images/iit.png" alt="IIT" class="w-full h-full object-contain">
                                 </div>
                                 <span class="text-xs text-gray-400 font-medium">IIT</span>
@@ -80,7 +91,7 @@
                             
                             <!-- UoW Logo -->
                             <div class="flex flex-col items-center">
-                                <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-xl flex items-center justify-center border-2 border-gray-200 hover:border-gray-400 transition-colors mb-2 overflow-hidden p-2">
+                                <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center border-2 border-gray-200 hover:border-gray-400 transition-colors mb-2 overflow-hidden p-2 sm:w-16 sm:h-16">
                                     <img src="images/uow.png" alt="UoW" class="w-full h-full object-contain">
                                 </div>
                                 <span class="text-xs text-gray-400 font-medium">UoW</span>
@@ -88,7 +99,7 @@
                             
                             <!-- ZCC Logo -->
                             <div class="flex flex-col items-center">
-                                <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-xl flex items-center justify-center border-2 border-gray-200 hover:border-gray-400 transition-colors mb-2 overflow-hidden p-2">
+                                <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center border-2 border-gray-200 hover:border-gray-400 transition-colors mb-2 overflow-hidden p-2 sm:w-16 sm:h-16">
                                     <img src="images/zcc.png" alt="ZCC" class="w-full h-full object-contain">
                                 </div>
                                 <span class="text-xs text-gray-400 font-medium">ZCC</span>
@@ -101,199 +112,244 @@
     </section>
 
     <!-- About Section -->
-    <section class="py-32 px-8 md:px-16 bg-gray-50">
+    <section class="py-24 px-4 bg-gray-50 md:py-32 md:px-16">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-16">
                 <div>
-                    <h2 class="text-6xl font-bold mb-8">ABOUT ME</h2>
-                    <div class="w-20 h-1 bg-black mb-8"></div>
+                    <h2 class="text-5xl font-bold mb-6 md:text-6xl md:mb-8">ABOUT ME</h2>
+                    <div class="w-20 h-1 bg-black mb-6 md:mb-8"></div>
                 </div>
-                <div class="space-y-6 text-lg leading-relaxed text-gray-700">
-                    <p>I'm a software and web development professional pursuing a Computer Science degree at IIT - University of Westminster. I specialize in machine learning, data science, and algorithmic problem-solving.</p>
-                    <p>With expertise in multiple programming languages and frameworks, I build full-stack applications and implement advanced ML algorithms to create innovative data-driven solutions.</p>
+                <div class="space-y-4 text-base leading-relaxed text-gray-700 md:space-y-6 md:text-lg">
+                    <p>Highly motivated Software & Web Development Professional currently pursuing a Computer Science degree with expertise in machine learning, data science, and algorithmic problem-solving. Proficient in multiple programming languages and frameworks with proven experience building full-stack applications and implementing advanced ML algorithms. Strong analytical skills, quick learning ability, and passion for creating innovative data-driven solutions.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="works" class="py-32 px-8 md:px-16">
+    <section id="works" class="py-24 px-4 md:py-32 md:px-16">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-6xl font-bold mb-4">SELECTED WORKS</h2>
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="text-5xl font-bold mb-4 md:text-6xl">WORKS</h2>
                 <div class="w-20 h-1 bg-black mx-auto"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Project 1 -->
-                <div class="group cursor-pointer">
-                    <div class="bg-gray-50 rounded-2xl overflow-hidden mb-4 aspect-video flex items-center justify-center hover:bg-gray-100 transition-colors">
-                        <span class="text-3xl font-bold text-gray-300">01</span>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <div class="group rounded-3xl shadow-lg bg-white p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold uppercase">AI-Based Financial Manager</h3>
+                        <i data-lucide="dollar-sign" class="w-6 h-6 text-purple-500"></i>
                     </div>
-                    <div class="space-y-2">
-                        <h3 class="text-xl font-bold">AI-Based Financial Manager</h3>
-                        <p class="text-xs text-gray-500">Dec 2024 - May 2025</p>
-                        <p class="text-sm text-gray-600 leading-relaxed">A student finance application that uses machine learning to provide intelligent financial insights and recommendations.</p>
-                        <div class="flex flex-wrap gap-2 pt-2">
-                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">React</span>
-                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">Node.js</span>
-                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">MongoDB</span>
-                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">Python ML</span>
-                        </div>
-                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Lead frontend development for student finance app using React, Node.js, MongoDB, Python ML</p>
+                    <p class="text-gray-800 font-medium">Tech Stack: React, Node.js, MongoDB, Python ML</p>
+                    <p class="text-gray-600 text-xs mt-2">December 2024 - May 2025</p>
+                    <div class="h-0.5 bg-gradient-to-r from-red-500 to-blue-500 mt-4"></div>
                 </div>
-
-                <!-- Project 2 -->
-                <div class="group cursor-pointer">
-                    <div class="bg-gray-50 rounded-2xl overflow-hidden mb-4 aspect-video flex items-center justify-center hover:bg-gray-100 transition-colors">
-                        <span class="text-3xl font-bold text-gray-300">02</span>
+                <div class="group rounded-3xl shadow-lg bg-white p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold uppercase">Real-Time Event Ticketing System</h3>
+                        <i data-lucide="ticket" class="w-6 h-6 text-purple-500"></i>
                     </div>
-                    <div class="space-y-2">
-                        <h3 class="text-xl font-bold">Real-Time Event Ticketing System</h3>
-                        <p class="text-xs text-gray-500">Oct - Dec 2024</p>
-                        <p class="text-sm text-gray-600 leading-relaxed">High-performance ticketing platform with 99.8% booking accuracy and real-time seat selection.</p>
-                        <div class="flex flex-wrap gap-2 pt-2">
-                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">Spring Boot</span>
-                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">React</span>
-                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">MySQL</span>
-                        </div>
-                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Built scalable platform with 99.8% booking accuracy.</p>
+                    <p class="text-gray-800 font-medium">Tech Stack: Spring Boot, React, MySQL</p>
+                    <p class="text-gray-600 text-xs mt-2">October - December 2024</p>
+                    <div class="h-0.5 bg-gradient-to-r from-red-500 to-blue-500 mt-4"></div>
                 </div>
-
-                <!-- Project 3 -->
-                <div class="group cursor-pointer">
-                    <div class="bg-gray-50 rounded-2xl overflow-hidden mb-4 aspect-video flex items-center justify-center hover:bg-gray-100 transition-colors">
-                        <span class="text-3xl font-bold text-gray-300">03</span>
+                <div class="group rounded-3xl shadow-lg bg-white p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold uppercase">University Progression Predictor</h3>
+                        <i data-lucide="graduation-cap" class="w-6 h-6 text-purple-500"></i>
                     </div>
-                    <div class="space-y-2">
-                        <h3 class="text-xl font-bold">Breast Cancer Prediction System</h3>
-                        <p class="text-xs text-gray-500">2025</p>
-                        <p class="text-sm text-gray-600 leading-relaxed">ML system using ensemble methods to predict mortality rates with high accuracy metrics.</p>
-                        <div class="flex flex-wrap gap-2 pt-2">
-                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">Python</span>
-                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">scikit-learn</span>
-                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">Pandas</span>
-                        </div>
-                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Created award-winning student classifier.</p>
+                    <p class="text-gray-800 font-medium">Tech Stack: Python</p>
+                    <p class="text-gray-600 text-xs mt-2">October - November 2023</p>
+                    <div class="h-0.5 bg-gradient-to-r from-red-500 to-blue-500 mt-4"></div>
                 </div>
-
-                <!-- Project 4 -->
-                <div class="group cursor-pointer">
-                    <div class="bg-gray-50 rounded-2xl overflow-hidden mb-4 aspect-video flex items-center justify-center hover:bg-gray-100 transition-colors">
-                        <span class="text-3xl font-bold text-gray-300">04</span>
+                <div class="group rounded-3xl shadow-lg bg-white p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold uppercase">Health Education Platform</h3>
+                        <i data-lucide="heart-pulse" class="w-6 h-6 text-purple-500"></i>
                     </div>
-                    <div class="space-y-2">
-                        <h3 class="text-xl font-bold">RESTful Bookstore API</h3>
-                        <p class="text-xs text-gray-500">2025</p>
-                        <p class="text-sm text-gray-600 leading-relaxed">Comprehensive backend API for e-commerce with full CRUD operations and authentication.</p>
-                        <div class="flex flex-wrap gap-2 pt-2">
-                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">JAX-RS</span>
-                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">Java</span>
-                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">Postman</span>
-                        </div>
-                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Full-stack developer for responsive website with user profiles.</p>
+                    <p class="text-gray-800 font-medium">Tech Stack: HTML, CSS, JS</p>
+                    <p class="text-gray-600 text-xs mt-2">2024</p>
+                    <div class="h-0.5 bg-gradient-to-r from-red-500 to-blue-500 mt-4"></div>
                 </div>
-
-                <!-- Project 5 -->
-                <div class="group cursor-pointer">
-                    <div class="bg-gray-50 rounded-2xl overflow-hidden mb-4 aspect-video flex items-center justify-center hover:bg-gray-100 transition-colors">
-                        <span class="text-3xl font-bold text-gray-300">05</span>
+                <div class="group rounded-3xl shadow-lg bg-white p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold uppercase">RESTful Bookstore API</h3>
+                        <i data-lucide="book-open" class="w-6 h-6 text-purple-500"></i>
                     </div>
-                    <div class="space-y-2">
-                        <h3 class="text-xl font-bold">University Progression Predictor</h3>
-                        <p class="text-xs text-gray-500">Oct - Nov 2023</p>
-                        <p class="text-sm text-gray-600 leading-relaxed">Award-winning ML model classifying student progression outcomes with high accuracy.</p>
-                        <div class="flex flex-wrap gap-2 pt-2">
-                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">Python</span>
-                        </div>
-                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Designed and implemented comprehensive e-commerce backend.</p>
+                    <p class="text-gray-800 font-medium">Tech Stack: JAX-RS, JSON, Java, Postman</p>
+                    <p class="text-gray-600 text-xs mt-2">Client-Server Architectures | 5COSC022W - 2025</p>
+                    <div class="h-0.5 bg-gradient-to-r from-red-500 to-blue-500 mt-4"></div>
                 </div>
-
-                <!-- Project 6 -->
-                <div class="group cursor-pointer">
-                    <div class="bg-gray-50 rounded-2xl overflow-hidden mb-4 aspect-video flex items-center justify-center hover:bg-gray-100 transition-colors">
-                        <span class="text-3xl font-bold text-gray-300">06</span>
+                <div class="group rounded-3xl shadow-lg bg-white p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold uppercase">Breast Cancer Prediction System</h3>
+                        <i data-lucide="activity" class="w-6 h-6 text-purple-500"></i>
                     </div>
-                    <div class="space-y-2">
-                        <h3 class="text-xl font-bold">Health Education Platform</h3>
-                        <p class="text-xs text-gray-500">2024</p>
-                        <p class="text-sm text-gray-600 leading-relaxed">Responsive web platform with user authentication and interactive content delivery.</p>
-                        <div class="flex flex-wrap gap-2 pt-2">
-                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">HTML5</span>
-                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">CSS3</span>
-                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">JavaScript</span>
-                        </div>
+                    <p class="text-gray-600 text-sm mb-4">Built classification models for mortality prediction.</p>
+                    <p class="text-gray-800 font-medium">Tech Stack: Python, scikit-learn, Pandas, NumPy, Matplotlib</p>
+                    <p class="text-gray-600 text-xs mt-2">Machine Learning & Data Mining | 5DATA002W.2 - 2025</p>
+                    <div class="h-0.5 bg-gradient-to-r from-red-500 to-blue-500 mt-4"></div>
+                </div>
+                <div class="group rounded-3xl shadow-lg bg-white p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold uppercase">Network Flow Analysis</h3>
+                        <i data-lucide="network" class="w-6 h-6 text-purple-500"></i>
                     </div>
+                    <p class="text-gray-600 text-sm mb-4">Implemented maximum flow algorithms (Ford-Fulkerson) in Java.</p>
+                    <p class="text-gray-800 font-medium">Tech Stack: Java</p>
+                    <p class="text-gray-600 text-xs mt-2">Algorithms & Data Structures | 5SENG003W - 2025</p>
+                    <div class="h-0.5 bg-gradient-to-r from-red-500 to-blue-500 mt-4"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-32 px-8 md:px-16 bg-black text-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-6xl font-bold mb-4">EXPERTISE</h2>
-                <div class="w-20 h-1 bg-white mx-auto"></div>
-            </div>
+    <section id="skills" class="py-24 px-4 bg-black text-white md:py-32 md:px-16">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-5xl font-bold mb-4 md:text-6xl">SKILLS</h2>
+            <div class="w-20 h-1 bg-white mx-auto mb-12 md:mb-16"></div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-                <div class="text-center p-8 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
-                    <i data-lucide="code-2" class="w-12 h-12 mx-auto mb-4"></i>
-                    <h3 class="text-lg font-semibold">JavaScript/TypeScript</h3>
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8 text-center">
+                <div class="luminous-card">
+                    <div class="light-layer">
+                        <div class="slit"></div>
+                        <div class="lumen">
+                            <div class="min"></div>
+                            <div class="mid"></div>
+                            <div class="hi"></div>
+                        </div>
+                        <div class="darken">
+                            <div class="sl"></div>
+                            <div class="ll"></div>
+                            <div class="slt"></div>
+                            <div class="srt"></div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="icon">
+                            <i data-lucide="code-2" class="w-8 h-8"></i>
+                        </div>
+                        <div class="bottom">
+                            <h4>Programming Languages</h4>
+                            <p>JavaScript/TypeScript, Python, Java, SQL</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-center p-8 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
-                    <i data-lucide="code-2" class="w-12 h-12 mx-auto mb-4"></i>
-                    <h3 class="text-lg font-semibold">Python</h3>
+                <div class="luminous-card">
+                    <div class="light-layer">
+                        <div class="slit"></div>
+                        <div class="lumen">
+                            <div class="min"></div>
+                            <div class="mid"></div>
+                            <div class="hi"></div>
+                        </div>
+                        <div class="darken">
+                            <div class="sl"></div>
+                            <div class="ll"></div>
+                            <div class="slt"></div>
+                            <div class="srt"></div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="icon">
+                            <i data-lucide="server" class="w-8 h-8"></i>
+                        </div>
+                        <div class="bottom">
+                            <h4>Backend Development</h4>
+                            <p>Node.js, Express.js, RESTful API Design</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-center p-8 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
-                    <i data-lucide="code-2" class="w-12 h-12 mx-auto mb-4"></i>
-                    <h3 class="text-lg font-semibold">Java</h3>
+                <div class="luminous-card">
+                    <div class="light-layer">
+                        <div class="slit"></div>
+                        <div class="lumen">
+                            <div class="min"></div>
+                            <div class="mid"></div>
+                            <div class="hi"></div>
+                        </div>
+                        <div class="darken">
+                            <div class="sl"></div>
+                            <div class="ll"></div>
+                            <div class="slt"></div>
+                            <div class="srt"></div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="icon">
+                            <i data-lucide="layout" class="w-8 h-8"></i>
+                        </div>
+                        <div class="bottom">
+                            <h4>Web & Frontend Development</h4>
+                            <p>HTML5, CSS3, React.js, Next.js, Responsive Web Design</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-center p-8 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
-                    <i data-lucide="code-2" class="w-12 h-12 mx-auto mb-4"></i>
-                    <h3 class="text-lg font-semibold">React.js</h3>
+                <div class="luminous-card">
+                    <div class="light-layer">
+                        <div class="slit"></div>
+                        <div class="lumen">
+                            <div class="min"></div>
+                            <div class="mid"></div>
+                            <div class="hi"></div>
+                        </div>
+                        <div class="darken">
+                            <div class="sl"></div>
+                            <div class="ll"></div>
+                            <div class="slt"></div>
+                            <div class="srt"></div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="icon">
+                            <i data-lucide="database" class="w-8 h-8"></i>
+                        </div>
+                        <div class="bottom">
+                            <h4>Database Management</h4>
+                            <p>MongoDB, MySQL</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-center p-8 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
-                    <i data-lucide="server" class="w-12 h-12 mx-auto mb-4"></i>
-                    <h3 class="text-lg font-semibold">Node.js</h3>
-                </div>
-                <div class="text-center p-8 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
-                    <i data-lucide="database" class="w-12 h-12 mx-auto mb-4"></i>
-                    <h3 class="text-lg font-semibold">MongoDB</h3>
-                </div>
-                <div class="text-center p-8 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
-                    <i data-lucide="database" class="w-12 h-12 mx-auto mb-4"></i>
-                    <h3 class="text-lg font-semibold">MySQL</h3>
-                </div>
-                <div class="text-center p-8 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
-                    <i data-lucide="brain" class="w-12 h-12 mx-auto mb-4"></i>
-                    <h3 class="text-lg font-semibold">Machine Learning</h3>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Frontend</h4>
-                    <p class="text-gray-400">React.js, Next.js, HTML5, CSS3</p>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Backend</h4>
-                    <p class="text-gray-400">Node.js, Express.js, Spring Boot</p>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Data Science</h4>
-                    <p class="text-gray-400">scikit-learn, Pandas, NumPy</p>
+                <div class="luminous-card">
+                    <div class="light-layer">
+                        <div class="slit"></div>
+                        <div class="lumen">
+                            <div class="min"></div>
+                            <div class="mid"></div>
+                            <div class="hi"></div>
+                        </div>
+                        <div class="darken">
+                            <div class="sl"></div>
+                            <div class="ll"></div>
+                            <div class="slt"></div>
+                            <div class="srt"></div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="icon">
+                            <i data-lucide="tool" class="w-8 h-8"></i>
+                        </div>
+                        <div class="bottom">
+                            <h4>Development Tools</h4>
+                            <p>Git, GitHub</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-32 px-8 md:px-16">
+    <section id="education" class="py-24 px-4 md:py-32 md:px-16">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-6xl font-bold mb-4">EDUCATION</h2>
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="text-5xl font-bold mb-4 md:text-6xl">EDUCATION</h2>
                 <div class="w-20 h-1 bg-black mx-auto"></div>
             </div>
 
@@ -301,19 +357,19 @@
                 <div class="border-l-4 border-black pl-8 py-4">
                     <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                         <div>
-                            <h3 class="text-3xl font-bold mb-2">Bachelor's Degree in Computer Science</h3>
-                            <p class="text-xl text-gray-600">IIT - University of Westminster</p>
+                            <h3 class="text-2xl font-bold mb-2 md:text-3xl">Bachelor's Degree in Computer Science</h3>
+                            <p class="text-lg text-gray-600 md:text-xl">IIT - University of Westminster</p>
                         </div>
-                        <span class="text-lg font-medium mt-2 md:mt-0">2023 - Present</span>
+                        <span class="text-base font-medium mt-2 md:mt-0 md:text-lg">2023 - Present</span>
                     </div>
                     <div class="space-y-2">
                         <p class="text-gray-600 font-medium">Relevant Coursework:</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-gray-100 text-sm rounded-full">Client-Server Architectures</span>
-                            <span class="px-4 py-2 bg-gray-100 text-sm rounded-full">Machine Learning & Data Mining</span>
-                            <span class="px-4 py-2 bg-gray-100 text-sm rounded-full">Algorithms & Data Structures</span>
-                            <span class="px-4 py-2 bg-gray-100 text-sm rounded-full">Database Systems</span>
-                            <span class="px-4 py-2 bg-gray-100 text-sm rounded-full">Software Engineering</span>
+                            <span class="px-3 py-1 bg-gray-100 text-sm rounded-full md:px-4 md:py-2">Client-Server Architectures</span>
+                            <span class="px-3 py-1 bg-gray-100 text-sm rounded-full md:px-4 md:py-2">Machine Learning & Data Mining</span>
+                            <span class="px-3 py-1 bg-gray-100 text-sm rounded-full md:px-4 md:py-2">Algorithms & Data Structures</span>
+                            <span class="px-3 py-1 bg-gray-100 text-sm rounded-full md:px-4 md:py-2">Database Systems</span>
+                            <span class="px-3 py-1 bg-gray-100 text-sm rounded-full md:px-4 md:py-2">Software Engineering Principles</span>
                         </div>
                     </div>
                 </div>
@@ -321,44 +377,81 @@
                 <div class="border-l-4 border-gray-300 pl-8 py-4">
                     <div class="flex flex-col md:flex-row md:justify-between md:items-start">
                         <div>
-                            <h3 class="text-2xl font-bold mb-2">GCE Advanced Level - Physical Science</h3>
-                            <p class="text-lg text-gray-600">Mathematics, Physics, Chemistry</p>
+                            <h3 class="text-xl font-bold mb-2 md:text-2xl">GCE Advanced Level - Physical Science</h3>
+                            <p class="text-base text-gray-600 md:text-lg">Mathematics, Physics, Chemistry</p>
                         </div>
-                        <span class="text-lg font-medium mt-2 md:mt-0">2021</span>
+                        <span class="text-base font-medium mt-2 md:mt-0 md:text-lg">2021</span>
+                    </div>
+                </div>
+
+                <div class="border-l-4 border-gray-300 pl-8 py-4">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 md:text-2xl">GCE Ordinary Level</h3>
+                            <p class="text-base text-gray-600 md:text-lg">9 Subjects including Mathematics, Science, and English</p>
+                        </div>
+                        <span class="text-base font-medium mt-2 md:mt-0 md:text-lg">2018</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- References Section -->
+    <section id="references" class="py-24 px-4 bg-gray-50 md:py-32 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="text-5xl font-bold mb-4 md:text-6xl">REFERENCES</h2>
+                <div class="w-20 h-1 bg-black mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+                <div class="p-6 bg-white rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-2">Academic Reference</h3>
+                    <p class="text-gray-600">Mr. Guhanathan Poravi</p>
+                    <p class="text-gray-600">Senior Lecturer Grade I, Informatics Institute of Technology</p>
+                    <p class="text-gray-600">Email: guhanathan.p@iit.ac.lk</p>
+                    <p class="text-gray-600">Phone: +94-112-362-305</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-2">Industry Reference</h3>
+                    <p class="text-gray-600">Mr. Ahsan Shamsudeen</p>
+                    <p class="text-gray-600">Senior AI Solutions Architect, H2O.ai Inc</p>
+                    <p class="text-gray-600">Email: ahsan.shamsudeen@h2o.ai</p>
+                    <p class="text-gray-600">Phone: +94-715-444-454</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="py-32 px-8 md:px-16 bg-black text-white">
+    <section id="contact" class="py-24 px-4 bg-black text-white md:py-32 md:px-16">
         <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-5xl md:text-7xl font-bold mb-8">LET'S WORK<br/>TOGETHER</h2>
-            <p class="text-xl text-gray-400 mb-4">40/1 Hill Street, Colombo</p>
-            <p class="text-xl text-gray-400 mb-12">ahamedaflal100@gmail.com</p>
+            <h2 class="text-4xl font-bold mb-6 md:text-7xl md:mb-8">LET'S WORK<br/>TOGETHER</h2>
+            <p class="text-base text-gray-400 mb-3 md:text-xl md:mb-4">40/1 Hill Street, Colombo</p>
+            <p class="text-base text-gray-400 mb-8 md:text-xl md:mb-12">ahamedaflal100@gmail.com</p>
             
-            <div class="flex justify-center gap-6 mb-12">
-                <a href="https://github.com/aflal123" target="_blank" class="w-14 h-14 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
-                    <i data-lucide="github" class="w-6 h-6"></i>
+            <div class="flex justify-center gap-4 mb-8 md:gap-6 md:mb-12">
+                <a href="https://github.com/aflal123" target="_blank" class="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors md:w-14 md:h-14">
+                    <i data-lucide="github" class="w-5 h-5 md:w-6 md:h-6"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/aflal-ahamed2002/" target="_blank" class="w-14 h-14 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
-                    <i data-lucide="linkedin" class="w-6 h-6"></i>
+                <a href="https://www.linkedin.com/in/aflal-ahamed2002/" target="_blank" class="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors md:w-14 md:h-14">
+                    <i data-lucide="linkedin" class="w-5 h-5 md:w-6 md:h-6"></i>
                 </a>
-                <a href="mailto:ahamedaflal100@gmail.com" class="w-14 h-14 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
-                    <i data-lucide="mail" class="w-6 h-6"></i>
+                <a href="mailto:ahamedaflal100@gmail.com" class="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors md:w-14 md:h-14">
+                    <i data-lucide="mail" class="w-5 h-5 md:w-6 md:h-6"></i>
                 </a>
             </div>
 
-            <a href="mailto:ahamedaflal100@gmail.com" class="inline-block bg-white text-black px-12 py-4 rounded-full text-lg font-medium hover:bg-gray-200 transition-colors">
+            <a href="mailto:ahamedaflal100@gmail.com" class="inline-block bg-white text-black px-8 py-3 rounded-full text-base font-medium hover:bg-gray-200 transition-colors md:px-12 md:py-4 md:text-lg">
                 GET IN TOUCH
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 px-8 md:px-16 bg-black text-white border-t border-white/10">
-        <div class="max-w-7xl mx-auto text-center text-gray-400">
+    <footer class="py-6 px-4 bg-black text-white border-t border-white/10 md:py-8 md:px-16">
+        <div class="max-w-7xl mx-auto text-center text-gray-400 text-sm md:text-base">
             <p>&copy; 2024 Aflal Ahamed. All rights reserved.</p>
         </div>
     </footer>

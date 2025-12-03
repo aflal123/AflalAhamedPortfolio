@@ -9,6 +9,44 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Check and load images
     loadImages();
+    
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    
+    if (menuToggle && menu) {
+        menuToggle.addEventListener('click', function() {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('show');
+            
+            // Toggle hamburger to close icon
+            const icon = menuToggle.querySelector('i');
+            if (icon.getAttribute('data-lucide') === 'menu') {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!menu.contains(e.target) && !menuToggle.contains(e.target) && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+                menu.classList.remove('show');
+                const icon = menuToggle.querySelector('i');
+                icon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            }
+        });
+    }
+
+    // Toggle functionality for luminous cards
+    document.querySelectorAll('.toggle').forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+    });
 });
 
 // Check if images exist and show them, otherwise show placeholder
