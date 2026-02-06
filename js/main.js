@@ -15,9 +15,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const menu = document.getElementById('menu');
 
     if (menuToggle && menu) {
-        menuToggle.addEventListener('click', function () {
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('show');
+        menuToggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Toggle the menu visibility
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('block');
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('block');
+            }
 
             // Toggle hamburger to close icon
             const icon = menuToggle.querySelector('i');
@@ -29,11 +38,22 @@ document.addEventListener('DOMContentLoaded', function () {
             lucide.createIcons();
         });
 
+        // Close menu when clicking a link
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                menu.classList.remove('block');
+                const icon = menuToggle.querySelector('i');
+                icon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
         // Close menu when clicking outside
         document.addEventListener('click', function (e) {
             if (!menu.contains(e.target) && !menuToggle.contains(e.target) && !menu.classList.contains('hidden')) {
                 menu.classList.add('hidden');
-                menu.classList.remove('show');
+                menu.classList.remove('block');
                 const icon = menuToggle.querySelector('i');
                 icon.setAttribute('data-lucide', 'menu');
                 lucide.createIcons();
