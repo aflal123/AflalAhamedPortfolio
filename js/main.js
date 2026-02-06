@@ -1,24 +1,24 @@
 // Main JavaScript File for Aflal Ahamed Portfolio
 
 // Prevent transitions on page load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     document.body.classList.remove('preload');
-    
+
     // Initialize animations
     initScrollAnimations();
-    
+
     // Check and load images
     loadImages();
-    
+
     // Mobile menu toggle
     const menuToggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
-    
+
     if (menuToggle && menu) {
-        menuToggle.addEventListener('click', function() {
+        menuToggle.addEventListener('click', function () {
             menu.classList.toggle('hidden');
             menu.classList.toggle('show');
-            
+
             // Toggle hamburger to close icon
             const icon = menuToggle.querySelector('i');
             if (icon.getAttribute('data-lucide') === 'menu') {
@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             lucide.createIcons();
         });
-        
+
         // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', function (e) {
             if (!menu.contains(e.target) && !menuToggle.contains(e.target) && !menu.classList.contains('hidden')) {
                 menu.classList.add('hidden');
                 menu.classList.remove('show');
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Toggle functionality for luminous cards
     document.querySelectorAll('.toggle').forEach(toggle => {
-        toggle.addEventListener('click', function() {
+        toggle.addEventListener('click', function () {
             this.classList.toggle('active');
         });
     });
@@ -52,13 +52,13 @@ document.addEventListener('DOMContentLoaded', function() {
 // Check if images exist and show them, otherwise show placeholder
 function checkImage(imagePath, imgElement, placeholder) {
     const img = new Image();
-    img.onload = function() {
+    img.onload = function () {
         imgElement.classList.remove('hidden');
         if (placeholder) {
             placeholder.classList.add('hidden');
         }
     };
-    img.onerror = function() {
+    img.onerror = function () {
         // Image doesn't exist, keep placeholder
         imgElement.classList.add('hidden');
         if (placeholder) {
@@ -108,10 +108,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Add active state to navigation on scroll
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
-    
+    const nav = document.querySelector('nav');
+
+    // Sticky nav effect - add scrolled class when scrolled down
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
@@ -136,10 +144,11 @@ function initScrollAnimations() {
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver(function(entries) {
+    const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('fade-in');
+                entry.target.classList.add('active');
                 observer.unobserve(entry.target);
             }
         });
@@ -154,6 +163,14 @@ function initScrollAnimations() {
     document.querySelectorAll('.group').forEach(card => {
         observer.observe(card);
     });
+
+    // Observe skill cards with stagger
+    const skillCards = document.querySelectorAll('.skill-card, .skill-grid-card');
+    skillCards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.05}s`;
+        card.classList.add('reveal');
+        observer.observe(card);
+    });
 }
 
 // Form validation function (for future contact form)
@@ -165,10 +182,10 @@ function validateEmail(email) {
 // Copy email to clipboard
 function copyEmail() {
     const email = 'ahamedaflal100@gmail.com';
-    navigator.clipboard.writeText(email).then(function() {
+    navigator.clipboard.writeText(email).then(function () {
         // Show copied notification
         showNotification('Email copied to clipboard!');
-    }, function(err) {
+    }, function (err) {
         console.error('Could not copy email: ', err);
     });
 }
@@ -199,23 +216,13 @@ if (isMobile()) {
     document.body.classList.add('mobile');
 }
 
-// Parallax effect for hero section (subtle)
-window.addEventListener('scroll', function() {
-    const scrolled = window.scrollY;
-    const hero = document.querySelector('#home');
-    
-    if (hero && scrolled < window.innerHeight) {
-        hero.style.transform = `translateY(${scrolled * 0.3}px)`;
-    }
-});
-
 // Project card hover effects
 document.querySelectorAll('.group').forEach(card => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
         this.style.transform = 'translateY(-5px)';
     });
-    
-    card.addEventListener('mouseleave', function() {
+
+    card.addEventListener('mouseleave', function () {
         this.style.transform = 'translateY(0)';
     });
 });
@@ -246,7 +253,7 @@ function animateStats() {
 }
 
 // Trigger stats animation when stats section is visible
-const statsObserver = new IntersectionObserver(function(entries) {
+const statsObserver = new IntersectionObserver(function (entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             animateStats();
@@ -261,7 +268,7 @@ if (statsSection) {
 }
 
 // Keyboard navigation
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
     // Navigate sections with arrow keys
     if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
         e.preventDefault();
@@ -294,7 +301,7 @@ function createBackToTopButton() {
     button.setAttribute('aria-label', 'Back to top');
     document.body.appendChild(button);
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 500) {
             button.style.opacity = '1';
         } else {
@@ -302,7 +309,7 @@ function createBackToTopButton() {
         }
     });
 
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
@@ -333,7 +340,7 @@ if ('IntersectionObserver' in window) {
 
 // Service Worker registration (for PWA - optional)
 if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
         // Uncomment when you create a service worker
         // navigator.serviceWorker.register('/sw.js').then(function(registration) {
         //     console.log('ServiceWorker registration successful');

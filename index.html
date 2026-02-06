@@ -1,33 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aflal Ahamed | Software Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-white text-black">
-    
+
+<body class="bg-[#0a0a0f] text-white">
+
+    <!-- Floating Particles Background -->
+    <div class="particles-container" id="particles"></div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress fixed top-0 left-0 h-1 bg-gradient-to-r from-purple-500 to-purple-300 z-50"
+        style="width: 0%"></div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-purple-600/80 backdrop-blur-sm border border-purple-500/30 rounded-full flex items-center justify-center text-white opacity-0 translate-y-10 transition-all duration-500 z-50 hover:bg-purple-500 hover:scale-110 shadow-lg shadow-purple-500/20">
+        <i data-lucide="chevron-up" class="w-6 h-6"></i>
+    </button>
+
     <!-- Navigation -->
-    <nav class="fixed top-4 inset-x-0 mx-auto max-w-7xl px-4 z-50 md:top-8">
-        <div class="bg-black rounded-full px-4 py-3 flex items-center justify-between shadow-2xl md:px-8 md:py-4 md:gap-8">
-            <div class="flex items-center gap-4">
-                <div class="w-6 h-6 bg-white transform rotate-45 md:w-8 md:h-8"></div>
-                <a href="#home" class="text-white hover:text-gray-300 font-medium">AFLAL</a>
+    <nav class="fixed top-4 inset-x-0 mx-auto max-w-7xl px-4 z-50 md:top-8" id="navbar">
+        <div
+            class="nav-glass bg-white/5 backdrop-blur-2xl border border-white/10 rounded-full px-4 py-3 flex items-center justify-between md:px-8 md:py-4 md:gap-8 relative overflow-hidden">
+            <!-- Glow effect behind nav -->
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             </div>
-            
-            <button id="menu-toggle" class="text-white md:hidden">
+
+            <div class="flex items-center gap-4 relative z-10">
+                <!-- <div
+                    class="logo-container w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center shadow-lg shadow-purple-500/40 hover:shadow-purple-500/60 hover:scale-110 transition-all duration-300 cursor-pointer">
+                    <span class="text-white font-bold text-lg">A</span>
+                </div> -->
+            </div>
+
+            <button id="menu-toggle" class="text-white md:hidden relative z-10 hover:text-purple-300 transition-colors">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
-            
-            <div id="menu" class="hidden absolute top-full left-0 right-0 bg-black rounded-b-3xl shadow-2xl overflow-hidden md:relative md:flex md:items-center md:gap-12 md:top-auto md:left-auto md:right-auto md:bg-transparent md:rounded-none md:shadow-none md:overflow-visible">
-                <div class="flex flex-col md:flex-row md:gap-12">
-                    <a href="#works" class="text-white hover:text-gray-300 font-medium px-6 py-4 md:px-0 md:py-0 md:pt-1">WORKS</a>
-                    <a href="#skills" class="text-white hover:text-gray-300 font-medium px-6 py-4 md:px-0 md:py-0 md:pt-1">SKILLS</a>
-                    <a href="#education" class="text-white hover:text-gray-300 font-medium px-6 py-4 md:px-0 md:py-0 md:pt-1">EDUCATION</a>
-                    <a href="#contact" class="bg-white text-black px-6 py-4 rounded-t-none md:rounded-full hover:bg-gray-200 font-medium md:px-6 md:py-2 md:ml-4">CONTACT ME</a>
+
+            <div id="menu"
+                class="hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-2xl border border-white/10 rounded-b-3xl shadow-2xl overflow-hidden md:relative md:flex md:items-center md:gap-8 md:top-auto md:left-auto md:right-auto md:bg-transparent md:rounded-none md:shadow-none md:overflow-visible md:border-none md:backdrop-blur-none">
+                <div class="flex flex-col md:flex-row md:gap-8">
+                    <a href="#works"
+                        class="nav-link text-white/70 hover:text-white font-medium px-6 py-4 md:px-3 md:py-2 transition-all duration-300 relative group">
+                        <span>Projects</span>
+                        <span
+                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-purple-300 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="#skills"
+                        class="nav-link text-white/70 hover:text-white font-medium px-6 py-4 md:px-3 md:py-2 transition-all duration-300 relative group">
+                        <span>Skills</span>
+                        <span
+                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-purple-300 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="#education"
+                        class="nav-link text-white/70 hover:text-white font-medium px-6 py-4 md:px-3 md:py-2 transition-all duration-300 relative group">
+                        <span>Education</span>
+                        <span
+                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-purple-300 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahamedaflal100@gmail.com&su=Hello%20Aflal"
+                        target="_blank"
+                        class="nav-cta ml-4 px-6 py-2 rounded-full bg-gradient-to-r from-purple-600 to-purple-500 text-white font-medium hover:shadow-lg hover:shadow-purple-500/40 hover:scale-105 transition-all duration-300 border border-purple-400/30">
+                        Book a Call
+                    </a>
                 </div>
             </div>
         </div>
@@ -38,71 +82,99 @@
         <div class="max-w-7xl mx-auto w-full">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="order-2 lg:order-1">
-                    <div class="inline-block bg-gray-100 px-4 py-2 rounded-full mb-6 md:mb-12 text-xs font-medium tracking-wide md:px-6 md:py-3 md:text-sm">
-                        SOFTWARE ENGINEER INTERN | TECHNOLOGY ENTHUSIAST | PROBLEM SOLVER
+                    <div
+                        class="inline-block bg-purple-500/10 border border-purple-500/20 text-purple-300 px-4 py-2 rounded-full mb-6 md:mb-12 text-xs font-medium tracking-wide md:px-6 md:py-3 md:text-sm">
+                        <span class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></span>
+                            SOFTWARE ENGINEER INTERN | TECHNOLOGY ENTHUSIAST
+                        </span>
                     </div>
-                    <h1 class="text-4xl font-bold leading-tight mb-6 md:text-7xl md:mb-12 lg:text-9xl">
-                        AFLAL<br/>AHAMED
+                    <h1 class="font-mono font-extrabold leading-tight mb-6 md:mb-12 lg:text-7xl typing-container">
+                        <span class="text-purple-400">&lt;</span><span
+                            class="typing-text bg-gradient-to-r from-white via-purple-200 to-purple-400 bg-clip-text text-transparent">Aflal</span><span
+                            class="text-white/40">.</span><span
+                            class="typing-text-delay bg-gradient-to-r from-purple-400 to-purple-300 bg-clip-text text-transparent">Ahamed</span><span
+                            class="text-purple-400">/&gt;</span><span class="typing-cursor">|</span>
                     </h1>
-                    <p class="text-base text-gray-600 mb-6 leading-relaxed md:text-2xl md:mb-12">
-                        Computer Science Student | Full-Stack Developer<br/>
-                        Machine Learning Enthusiast
+                    <p class="text-base text-white/60 mb-6 leading-relaxed md:text-xl md:mb-8 max-w-lg">
+                        Computer Science Student & Full-Stack Developer specializing in Machine Learning and modern web
+                        technologies.
                     </p>
-                    <a href="#contact" class="inline-block bg-black text-white px-6 py-3 rounded-full text-base font-medium hover:bg-gray-800 transition-colors w-full sm:w-auto text-center md:px-12 md:py-4 md:text-lg">
-                        GET IN TOUCH
-                    </a>
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahamedaflal100@gmail.com&su=Hello%20Aflal"
+                            target="_blank"
+                            class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-purple-500 text-white px-6 py-3 rounded-full text-base font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all text-center md:px-8 md:py-4 md:text-lg">
+                            Get Started
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1gN3mA5Vj9eWnz8s2Cq1pLk4tXr5yZ7a/view?usp=drive_link"
+                            target="_blank"
+                            class="inline-block border border-white/20 text-white px-6 py-3 rounded-full text-base font-medium hover:bg-white/5 transition-colors text-center md:px-8 md:py-4 md:text-lg">Download
+                            CV</a>
+                    </div>
                 </div>
-                
+
                 <div class="order-1 lg:order-2 flex flex-col items-center">
                     <div class="relative mb-8">
-                        <div class="w-48 h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl overflow-hidden border-4 border-gray-300 shadow-2xl sm:w-72 sm:h-[26rem] md:w-64 md:h-96">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-purple-400 rounded-3xl blur opacity-30">
+                        </div>
+                        <div
+                            class="relative w-48 h-64 bg-white/5 rounded-3xl overflow-hidden border border-white/10 shadow-2xl sm:w-72 sm:h-[26rem] md:w-64 md:h-96">
                             <!-- Profile Photo -->
                             <img src="images/afla.png" alt="Aflal Ahamed" class="w-full h-full object-cover">
                         </div>
                     </div>
-                    
+
                     <!-- Stats Mobile -->
                     <div class="grid grid-cols-3 gap-2 w-full max-w-xs sm:max-w-sm lg:hidden mb-6 sm:gap-4 sm:mb-8">
-                        <div class="bg-white p-3 rounded-xl shadow-lg text-center sm:p-4">
-                            <div class="text-xl font-bold mb-1 sm:text-3xl">2+</div>
-                            <div class="text-xs text-gray-600">Years</div>
+                        <div
+                            class="bg-white/5 border border-white/10 p-3 rounded-xl shadow-lg text-center sm:p-4 backdrop-blur-sm">
+                            <div class="text-xl font-bold mb-1 sm:text-3xl text-purple-300">2+</div>
+                            <div class="text-xs text-white/50">Years</div>
                         </div>
-                        <div class="bg-white p-3 rounded-xl shadow-lg text-center sm:p-4">
-                            <div class="text-xl font-bold mb-1 sm:text-3xl">6+</div>
-                            <div class="text-xs text-gray-600">Projects</div>
+                        <div
+                            class="bg-white/5 border border-white/10 p-3 rounded-xl shadow-lg text-center sm:p-4 backdrop-blur-sm">
+                            <div class="text-xl font-bold mb-1 sm:text-3xl text-purple-300">6+</div>
+                            <div class="text-xs text-white/50">Projects</div>
                         </div>
-                        <div class="bg-white p-3 rounded-xl shadow-lg text-center sm:p-4">
-                            <div class="text-xl font-bold mb-1 sm:text-3xl">99.8%</div>
-                            <div class="text-xs text-gray-600">Accuracy</div>
+                        <div
+                            class="bg-white/5 border border-white/10 p-3 rounded-xl shadow-lg text-center sm:p-4 backdrop-blur-sm">
+                            <div class="text-xl font-bold mb-1 sm:text-3xl text-purple-300">99.8%</div>
+                            <div class="text-xs text-white/50">Accuracy</div>
                         </div>
                     </div>
-                    
+
                     <!-- Education Logos -->
                     <div class="text-center">
-                        <p class="text-xs text-gray-500 mb-2 font-medium sm:text-sm sm:mb-4">EDUCATION</p>
+                        <p class="text-xs text-white/50 mb-2 font-medium sm:text-sm sm:mb-4">EDUCATION</p>
                         <div class="flex items-start justify-center gap-3 sm:gap-6">
                             <!-- IIT Logo -->
                             <div class="flex flex-col items-center">
-                                <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center border-2 border-gray-200 hover:border-gray-400 transition-colors mb-2 overflow-hidden p-2 sm:w-16 sm:h-16">
+                                <div
+                                    class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center border-2 border-white/10 hover:border-white/25 transition-colors mb-2 overflow-hidden p-2 sm:w-16 sm:h-16">
                                     <img src="images/iit.png" alt="IIT" class="w-full h-full object-contain">
                                 </div>
-                                <span class="text-xs text-gray-400 font-medium">IIT</span>
+                                <span class="text-xs text-white/50 font-medium">IIT</span>
                             </div>
-                            
+
                             <!-- UoW Logo -->
                             <div class="flex flex-col items-center">
-                                <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center border-2 border-gray-200 hover:border-gray-400 transition-colors mb-2 overflow-hidden p-2 sm:w-16 sm:h-16">
-                                    <img src="images/uow.png" alt="UoW" class="w-full h-full object-contain">
+                                <div
+                                    class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center border-2 border-white/10 hover:border-white/25 transition-colors mb-2 overflow-hidden p-2 sm:w-16 sm:h-16">
+                                    <img src="images/uow.png" alt="University of Westminster"
+                                        class="w-full h-full object-contain">
                                 </div>
-                                <span class="text-xs text-gray-400 font-medium">UoW</span>
+                                <span class="text-xs text-white/50 font-medium">University of Westminster</span>
                             </div>
-                            
+
                             <!-- ZCC Logo -->
                             <div class="flex flex-col items-center">
-                                <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center border-2 border-gray-200 hover:border-gray-400 transition-colors mb-2 overflow-hidden p-2 sm:w-16 sm:h-16">
+                                <div
+                                    class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center border-2 border-white/10 hover:border-white/25 transition-colors mb-2 overflow-hidden p-2 sm:w-16 sm:h-16">
                                     <img src="images/zcc.png" alt="ZCC" class="w-full h-full object-contain">
                                 </div>
-                                <span class="text-xs text-gray-400 font-medium">ZCC</span>
+                                <span class="text-xs text-white/50 font-medium">ZCC</span>
                             </div>
                         </div>
                     </div>
@@ -112,15 +184,56 @@
     </section>
 
     <!-- About Section -->
-    <section class="py-24 px-4 bg-gray-50 md:py-32 md:px-16">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12 md:gap-16">
-                <div>
-                    <h2 class="text-5xl font-bold mb-6 md:text-6xl md:mb-8">ABOUT ME</h2>
-                    <div class="w-20 h-1 bg-black mb-6 md:mb-8"></div>
+    <section class="py-24 px-4 md:py-32 md:px-16" id="about">
+        <div class="max-w-5xl mx-auto">
+            <!-- Premium Glassmorphism Card -->
+            <div
+                class="about-card relative bg-[#0f0f14]/80 backdrop-blur-2xl rounded-3xl p-8 md:p-12 border border-white/10 shadow-2xl overflow-hidden">
+                <!-- Subtle dot pattern background -->
+                <div class="absolute inset-0 opacity-30"
+                    style="background-image: radial-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px); background-size: 24px 24px;">
                 </div>
-                <div class="space-y-4 text-base leading-relaxed text-gray-700 md:space-y-6 md:text-lg">
-                    <p>Highly motivated Software & Web Development Professional currently pursuing a Computer Science degree with expertise in machine learning, data science, and algorithmic problem-solving. Proficient in multiple programming languages and frameworks with proven experience building full-stack applications and implementing advanced ML algorithms. Strong analytical skills, quick learning ability, and passion for creating innovative data-driven solutions.</p>
+
+                <!-- Gradient border glow -->
+                <div
+                    class="absolute inset-0 rounded-3xl p-[1px] bg-gradient-to-br from-purple-500/30 via-transparent to-purple-500/20 pointer-events-none">
+                </div>
+
+                <!-- Inner glow -->
+                <div
+                    class="absolute -inset-px rounded-3xl bg-gradient-to-br from-purple-500/5 via-transparent to-purple-500/5 pointer-events-none">
+                </div>
+
+                <div class="relative z-10">
+                    <!-- Header with icon -->
+                    <div class="flex items-center gap-4 mb-8">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center shadow-lg shadow-purple-500/30">
+                            <i data-lucide="user" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-4xl md:text-5xl font-bold text-white">About Me</h2>
+                            <p class="text-white/50 text-sm mt-1">Software Engineer & Developer</p>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="space-y-6 text-lg text-white/80 leading-relaxed">
+                        <p>I'm <span class="text-purple-300 font-medium">Aflal Ahamed</span>, a Computer Science
+                            undergraduate and aspiring Full-Stack Software Engineer with a strong interest in building
+                            scalable web applications and intelligent, data-driven solutions.</p>
+
+                        <p>I have hands-on experience developing full-stack applications using <span
+                                class="text-purple-300 font-medium">React, Node.js, Express, MongoDB, and MySQL</span>,
+                            along with a solid foundation in JavaScript, Python, and Java. Through academic and personal
+                            projects, I've built RESTful APIs, responsive user interfaces, and machine-learning-powered
+                            systems that solve real-world problems.</p>
+
+                        <p>I enjoy breaking down complex problems, writing clean and maintainable code, and continuously
+                            learning new technologies. Currently, I'm focused on strengthening my backend architecture
+                            skills, cloud-ready development, and advanced JavaScript frameworks to grow into a strong
+                            industry-ready full-stack engineer.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -128,217 +241,333 @@
 
     <!-- Projects Section -->
     <section id="works" class="py-24 px-4 md:py-32 md:px-16">
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto card">
             <div class="text-center mb-16 md:mb-20">
-                <h2 class="text-5xl font-bold mb-4 md:text-6xl">WORKS</h2>
-                <div class="w-20 h-1 bg-black mx-auto"></div>
+                <h2 class="text-5xl font-bold mb-4 md:text-6xl">Projects</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-purple-300 mx-auto"></div>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                <div class="group rounded-3xl shadow-lg bg-white p-6">
+                <div class="group rounded-3xl shadow-lg bg-white/5 border border-white/10 p-6 glow-border">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-xl font-bold uppercase">AI-Based Financial Manager</h3>
                         <i data-lucide="dollar-sign" class="w-6 h-6 text-purple-500"></i>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4">Lead frontend development for student finance app using React, Node.js, MongoDB, Python ML</p>
-                    <p class="text-gray-800 font-medium">Tech Stack: React, Node.js, MongoDB, Python ML</p>
-                    <p class="text-gray-600 text-xs mt-2">December 2024 - May 2025</p>
-                    <div class="h-0.5 bg-gradient-to-r from-red-500 to-blue-500 mt-4"></div>
+                    <p class="text-white/70 text-sm mb-4">Lead frontend development for student finance app using React,
+                        Node.js, MongoDB, Python ML</p>
+                    <p class="text-white/90 font-medium">Tech Stack: React, Node.js, MongoDB, Python ML</p>
+                    <p class="text-white/50 text-xs mt-2">December 2024 - May 2025</p>
+                    <div class="mt-4 flex flex-wrap gap-3">
+                        <a href="https://github.com/aflal123/REPLACE_WITH_AI_FINANCIAL_MANAGER_REPO" target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-purple-500 transition-colors">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            GitHub
+                        </a>
+                    </div>
+                    <div class="h-0.5 bg-gradient-to-r from-purple-600 to-purple-300 mt-4"></div>
                 </div>
-                <div class="group rounded-3xl shadow-lg bg-white p-6">
+                <div class="group rounded-3xl shadow-lg bg-white/5 border border-white/10 p-6 glow-border">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-xl font-bold uppercase">Real-Time Event Ticketing System</h3>
                         <i data-lucide="ticket" class="w-6 h-6 text-purple-500"></i>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4">Built scalable platform with 99.8% booking accuracy.</p>
-                    <p class="text-gray-800 font-medium">Tech Stack: Spring Boot, React, MySQL</p>
-                    <p class="text-gray-600 text-xs mt-2">October - December 2024</p>
-                    <div class="h-0.5 bg-gradient-to-r from-red-500 to-blue-500 mt-4"></div>
+                    <p class="text-white/70 text-sm mb-4">Built scalable platform with 99.8% booking accuracy.</p>
+                    <p class="text-white/90 font-medium">Tech Stack: Spring Boot, React, MySQL</p>
+                    <p class="text-white/50 text-xs mt-2">October - December 2024</p>
+                    <div class="mt-4 flex flex-wrap gap-3">
+                        <a href="https://github.com/aflal123/REPLACE_WITH_EVENT_TICKETING_REPO" target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-purple-500 transition-colors">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            GitHub
+                        </a>
+                    </div>
+                    <div class="h-0.5 bg-gradient-to-r from-purple-600 to-purple-300 mt-4"></div>
                 </div>
-                <div class="group rounded-3xl shadow-lg bg-white p-6">
+                <div class="group rounded-3xl shadow-lg bg-white/5 border border-white/10 p-6 glow-border">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-xl font-bold uppercase">University Progression Predictor</h3>
                         <i data-lucide="graduation-cap" class="w-6 h-6 text-purple-500"></i>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4">Created award-winning student classifier.</p>
-                    <p class="text-gray-800 font-medium">Tech Stack: Python</p>
-                    <p class="text-gray-600 text-xs mt-2">October - November 2023</p>
-                    <div class="h-0.5 bg-gradient-to-r from-red-500 to-blue-500 mt-4"></div>
+                    <p class="text-white/70 text-sm mb-4">Created award-winning student classifier.</p>
+                    <p class="text-white/90 font-medium">Tech Stack: Python</p>
+                    <p class="text-white/50 text-xs mt-2">October - November 2023</p>
+                    <div class="mt-4 flex flex-wrap gap-3">
+                        <a href="https://github.com/aflal123/REPLACE_WITH_PROGRESSION_PREDICTOR_REPO" target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-purple-500 transition-colors">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            GitHub
+                        </a>
+                    </div>
+                    <div class="h-0.5 bg-gradient-to-r from-purple-600 to-purple-300 mt-4"></div>
                 </div>
-                <div class="group rounded-3xl shadow-lg bg-white p-6">
+                <div class="group rounded-3xl shadow-lg bg-white/5 border border-white/10 p-6 glow-border">
                     <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-bold uppercase">Health Education Platform</h3>
+                        <h3 class="text-xl font-bold uppercase text-white">Health Education Platform</h3>
                         <i data-lucide="heart-pulse" class="w-6 h-6 text-purple-500"></i>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4">Full-stack developer for responsive website with user profiles.</p>
-                    <p class="text-gray-800 font-medium">Tech Stack: HTML, CSS, JS</p>
-                    <p class="text-gray-600 text-xs mt-2">2024</p>
-                    <div class="h-0.5 bg-gradient-to-r from-red-500 to-blue-500 mt-4"></div>
+                    <p class="text-white/70 text-sm mb-4">Full-stack developer for responsive website with user
+                        profiles.</p>
+                    <p class="text-white/90 font-medium">Tech Stack: HTML, CSS, JS</p>
+                    <p class="text-white/50 text-xs mt-2">2024</p>
+                    <div class="mt-4 flex flex-wrap gap-3">
+                        <a href="https://github.com/aflal123/REPLACE_WITH_HEALTH_EDU_PLATFORM_REPO" target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-purple-500 transition-colors">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            GitHub
+                        </a>
+                    </div>
+                    <div class="h-0.5 bg-gradient-to-r from-purple-600 to-purple-300 mt-4"></div>
                 </div>
-                <div class="group rounded-3xl shadow-lg bg-white p-6">
+                <div class="group rounded-3xl shadow-lg bg-white/5 border border-white/10 p-6 glow-border">
                     <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-bold uppercase">RESTful Bookstore API</h3>
+                        <h3 class="text-xl font-bold uppercase text-white">RESTful Bookstore API</h3>
                         <i data-lucide="book-open" class="w-6 h-6 text-purple-500"></i>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4">Designed and implemented comprehensive e-commerce backend.</p>
-                    <p class="text-gray-800 font-medium">Tech Stack: JAX-RS, JSON, Java, Postman</p>
-                    <p class="text-gray-600 text-xs mt-2">Client-Server Architectures | 5COSC022W - 2025</p>
-                    <div class="h-0.5 bg-gradient-to-r from-red-500 to-blue-500 mt-4"></div>
+                    <p class="text-white/70 text-sm mb-4">Designed and implemented comprehensive e-commerce backend.</p>
+                    <p class="text-white/90 font-medium">Tech Stack: JAX-RS, JSON, Java, Postman</p>
+                    <p class="text-white/50 text-xs mt-2">Client-Server Architectures | 5COSC022W - 2025</p>
+                    <div class="mt-4 flex flex-wrap gap-3">
+                        <a href="https://github.com/aflal123/REPLACE_WITH_BOOKSTORE_API_REPO" target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-purple-500 transition-colors">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            GitHub
+                        </a>
+                    </div>
+                    <div class="h-0.5 bg-gradient-to-r from-purple-600 to-purple-300 mt-4"></div>
                 </div>
-                <div class="group rounded-3xl shadow-lg bg-white p-6">
+                <div class="group rounded-3xl shadow-lg bg-white/5 border border-white/10 p-6 glow-border">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-xl font-bold uppercase">Breast Cancer Prediction System</h3>
                         <i data-lucide="activity" class="w-6 h-6 text-purple-500"></i>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4">Built classification models for mortality prediction.</p>
-                    <p class="text-gray-800 font-medium">Tech Stack: Python, scikit-learn, Pandas, NumPy, Matplotlib</p>
-                    <p class="text-gray-600 text-xs mt-2">Machine Learning & Data Mining | 5DATA002W.2 - 2025</p>
-                    <div class="h-0.5 bg-gradient-to-r from-red-500 to-blue-500 mt-4"></div>
+                    <p class="text-white/70 text-sm mb-4">Built classification models for mortality prediction.</p>
+                    <p class="text-white/90 font-medium">Tech Stack: Python, scikit-learn, Pandas, NumPy, Matplotlib</p>
+                    <p class="text-white/50 text-xs mt-2">Machine Learning & Data Mining | 5DATA002W.2 - 2025</p>
+                    <div class="mt-4 flex flex-wrap gap-3">
+                        <a href="https://github.com/aflal123/REPLACE_WITH_BREAST_CANCER_PREDICTION_REPO" target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-purple-500 transition-colors">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            GitHub
+                        </a>
+                    </div>
+                    <div class="h-0.5 bg-gradient-to-r from-purple-600 to-purple-300 mt-4"></div>
                 </div>
-                <div class="group rounded-3xl shadow-lg bg-white p-6">
+                <div class="group rounded-3xl shadow-lg bg-white/5 border border-white/10 p-6 glow-border">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-xl font-bold uppercase">Network Flow Analysis</h3>
                         <i data-lucide="network" class="w-6 h-6 text-purple-500"></i>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4">Implemented maximum flow algorithms (Ford-Fulkerson) in Java.</p>
-                    <p class="text-gray-800 font-medium">Tech Stack: Java</p>
-                    <p class="text-gray-600 text-xs mt-2">Algorithms & Data Structures | 5SENG003W - 2025</p>
-                    <div class="h-0.5 bg-gradient-to-r from-red-500 to-blue-500 mt-4"></div>
+                    <p class="text-white/70 text-sm mb-4">Implemented maximum flow algorithms (Ford-Fulkerson) in Java.
+                    </p>
+                    <p class="text-white/90 font-medium">Tech Stack: Java</p>
+                    <p class="text-white/50 text-xs mt-2">Algorithms & Data Structures | 5SENG003W - 2025</p>
+                    <div class="mt-4 flex flex-wrap gap-3">
+                        <a href="https://github.com/aflal123/REPLACE_WITH_NETWORK_FLOW_REPO" target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-purple-500 transition-colors">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            GitHub
+                        </a>
+                    </div>
+                    <div class="h-0.5 bg-gradient-to-r from-purple-600 to-purple-300 mt-4"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-24 px-4 bg-black text-white md:py-32 md:px-16">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-5xl font-bold mb-4 md:text-6xl">SKILLS</h2>
-            <div class="w-20 h-1 bg-white mx-auto mb-12 md:mb-16"></div>
+    <section id="skills" class="py-24 px-4 text-white md:py-32 md:px-16">
+        <div class="max-w-7xl mx-auto card">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4 md:text-6xl">SKILLS</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-purple-300 mx-auto mb-8"></div>
+                <p class="text-base text-white/60 max-w-2xl mx-auto">
+                    Technologies and tools I use to bring ideas to life. Always learning, always building.
+                </p>
+            </div>
 
-            <div class="grid md:grid-cols-3 gap-6 md:gap-8 text-center">
-                <div class="luminous-card">
-                    <div class="light-layer">
-                        <div class="slit"></div>
-                        <div class="lumen">
-                            <div class="min"></div>
-                            <div class="mid"></div>
-                            <div class="hi"></div>
-                        </div>
-                        <div class="darken">
-                            <div class="sl"></div>
-                            <div class="ll"></div>
-                            <div class="slt"></div>
-                            <div class="srt"></div>
-                        </div>
+            <!-- Programming Languages -->
+            <div class="skill-category">
+                <div class="flex items-center gap-4 mb-8">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/30 flex items-center justify-center">
+                        <i data-lucide="code-2" class="w-6 h-6 text-purple-300"></i>
                     </div>
-                    <div class="content">
-                        <div class="icon">
-                            <i data-lucide="code-2" class="w-8 h-8"></i>
-                        </div>
-                        <div class="bottom">
-                            <h4>Programming Languages</h4>
-                            <p>JavaScript/TypeScript, Python, Java, SQL</p>
-                        </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Programming Languages</h3>
+                        <p class="text-white/50 text-sm">Core languages I work with daily</p>
                     </div>
                 </div>
-                <div class="luminous-card">
-                    <div class="light-layer">
-                        <div class="slit"></div>
-                        <div class="lumen">
-                            <div class="min"></div>
-                            <div class="mid"></div>
-                            <div class="hi"></div>
+                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <div class="skill-card-premium group">
+                        <div class="premium-icon-wrap flex items-center justify-center">
+                            <i class="devicon-javascript-plain text-5xl" style="color: #F7DF1E;"></i>
                         </div>
-                        <div class="darken">
-                            <div class="sl"></div>
-                            <div class="ll"></div>
-                            <div class="slt"></div>
-                            <div class="srt"></div>
-                        </div>
+                        <span class="skill-label glow-text">JavaScript</span>
                     </div>
-                    <div class="content">
-                        <div class="icon">
-                            <i data-lucide="server" class="w-8 h-8"></i>
+                    <div class="skill-card-premium group">
+                        <div class="premium-icon-wrap flex items-center justify-center">
+                            <i class="devicon-python-plain text-5xl" style="color: #3776AB;"></i>
                         </div>
-                        <div class="bottom">
-                            <h4>Backend Development</h4>
-                            <p>Node.js, Express.js, RESTful API Design</p>
-                        </div>
+                        <span class="skill-label glow-text">Python</span>
                     </div>
-                </div>
-                <div class="luminous-card">
-                    <div class="light-layer">
-                        <div class="slit"></div>
-                        <div class="lumen">
-                            <div class="min"></div>
-                            <div class="mid"></div>
-                            <div class="hi"></div>
+                    <div class="skill-card-premium group">
+                        <div class="premium-icon-wrap flex items-center justify-center">
+                            <i class="devicon-java-plain text-5xl" style="color: #E76F00;"></i>
                         </div>
-                        <div class="darken">
-                            <div class="sl"></div>
-                            <div class="ll"></div>
-                            <div class="slt"></div>
-                            <div class="srt"></div>
-                        </div>
+                        <span class="skill-label glow-text">Java</span>
                     </div>
-                    <div class="content">
-                        <div class="icon">
-                            <i data-lucide="layout" class="w-8 h-8"></i>
+                    <div class="skill-card-premium group">
+                        <div class="premium-icon-wrap flex items-center justify-center">
+                            <i class="devicon-mysql-plain text-5xl" style="color: #00ADD8;"></i>
                         </div>
-                        <div class="bottom">
-                            <h4>Web & Frontend Development</h4>
-                            <p>HTML5, CSS3, React.js, Next.js, Responsive Web Design</p>
+                        <span class="skill-label glow-text">SQL</span>
+                    </div>
+                    <div class="skill-card-premium group">
+                        <div class="premium-icon-wrap flex items-center justify-center">
+                            <i class="devicon-nodejs-plain text-5xl" style="color: #539E43;"></i>
                         </div>
+                        <span class="skill-label glow-text">Node.js</span>
+                    </div>
+                    <div class="skill-card-premium group">
+                        <div class="premium-icon-wrap flex items-center justify-center">
+                            <i class="devicon-react-original text-5xl" style="color: #61DAFB;"></i>
+                        </div>
+                        <span class="skill-label glow-text">React</span>
                     </div>
                 </div>
-                <div class="luminous-card">
-                    <div class="light-layer">
-                        <div class="slit"></div>
-                        <div class="lumen">
-                            <div class="min"></div>
-                            <div class="mid"></div>
-                            <div class="hi"></div>
+            </div>
+
+            <!-- Skills Grid - Frameworks & Tools -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Frontend -->
+                <div class="skill-grid-card glow-border">
+                    <div class="skill-grid-header">
+                        <div class="skill-grid-icon bg-frontend">
+                            <i data-lucide="layout" class="w-6 h-6 text-purple-400"></i>
                         </div>
-                        <div class="darken">
-                            <div class="sl"></div>
-                            <div class="ll"></div>
-                            <div class="slt"></div>
-                            <div class="srt"></div>
+                        <div>
+                            <h4 class="skill-grid-title">Frontend</h4>
                         </div>
                     </div>
-                    <div class="content">
-                        <div class="icon">
-                            <i data-lucide="database" class="w-8 h-8"></i>
-                        </div>
-                        <div class="bottom">
-                            <h4>Database Management</h4>
-                            <p>MongoDB, MySQL</p>
-                        </div>
+                    <p class="skill-grid-desc">Building responsive, interactive web applications with modern frameworks
+                        and tools.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Bootstrap</span>
                     </div>
                 </div>
-                <div class="luminous-card">
-                    <div class="light-layer">
-                        <div class="slit"></div>
-                        <div class="lumen">
-                            <div class="min"></div>
-                            <div class="mid"></div>
-                            <div class="hi"></div>
+
+                <!-- Backend -->
+                <div class="skill-grid-card glow-border">
+                    <div class="skill-grid-header">
+                        <div class="skill-grid-icon bg-backend">
+                            <i data-lucide="server" class="w-6 h-6 text-purple-300"></i>
                         </div>
-                        <div class="darken">
-                            <div class="sl"></div>
-                            <div class="ll"></div>
-                            <div class="slt"></div>
-                            <div class="srt"></div>
+                        <div>
+                            <h4 class="skill-grid-title">Backend</h4>
                         </div>
                     </div>
-                    <div class="content">
-                        <div class="icon">
-                            <i data-lucide="tool" class="w-8 h-8"></i>
+                    <p class="skill-grid-desc">Developing robust APIs and server-side applications with scalable
+                        architecture.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">GraphQL</span>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="skill-grid-card glow-border">
+                    <div class="skill-grid-header">
+                        <div class="skill-grid-icon bg-db">
+                            <i data-lucide="database" class="w-6 h-6 text-purple-500"></i>
                         </div>
-                        <div class="bottom">
-                            <h4>Development Tools</h4>
-                            <p>Git, GitHub</p>
+                        <div>
+                            <h4 class="skill-grid-title">Database</h4>
                         </div>
+                    </div>
+                    <p class="skill-grid-desc">Designing and managing both SQL and NoSQL databases for optimal
+                        performance.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Redis</span>
+                    </div>
+                </div>
+
+                <!-- Machine Learning -->
+                <div class="skill-grid-card glow-border">
+                    <div class="skill-grid-header">
+                        <div class="skill-grid-icon bg-ml">
+                            <i data-lucide="brain" class="w-6 h-6 text-purple-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="skill-grid-title">Machine Learning</h4>
+                        </div>
+                    </div>
+                    <p class="skill-grid-desc">Implementing ML algorithms and data analysis for intelligent
+                        applications.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">scikit-learn</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">TensorFlow</span>
+                    </div>
+                </div>
+
+                <!-- Tools & DevOps -->
+                <div class="skill-grid-card glow-border">
+                    <div class="skill-grid-header">
+                        <div class="skill-grid-icon bg-tools">
+                            <i data-lucide="wrench" class="w-6 h-6 text-purple-300"></i>
+                        </div>
+                        <div>
+                            <h4 class="skill-grid-title">Tools & DevOps</h4>
+                        </div>
+                    </div>
+                    <p class="skill-grid-desc">Using industry-standard tools for version control, deployment, and
+                        collaboration.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">GitHub</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Postman</span>
+                        <span class="tech-tag">VS Code</span>
+                    </div>
+                </div>
+
+                <!-- Testing -->
+                <div class="skill-grid-card glow-border">
+                    <div class="skill-grid-header">
+                        <div class="skill-grid-icon bg-react">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-purple-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="skill-grid-title">Testing</h4>
+                        </div>
+                    </div>
+                    <p class="skill-grid-desc">Ensuring code quality through comprehensive testing methodologies.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JUnit</span>
+                        <span class="tech-tag">Jest</span>
+                        <span class="tech-tag">Selenium</span>
+                        <span class="tech-tag">Cypress</span>
                     </div>
                 </div>
             </div>
@@ -347,112 +576,147 @@
 
     <!-- Education Section -->
     <section id="education" class="py-24 px-4 md:py-32 md:px-16">
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto card">
             <div class="text-center mb-16 md:mb-20">
                 <h2 class="text-5xl font-bold mb-4 md:text-6xl">EDUCATION</h2>
-                <div class="w-20 h-1 bg-black mx-auto"></div>
+                <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-purple-300 mx-auto"></div>
             </div>
 
             <div class="space-y-12">
-                <div class="border-l-4 border-black pl-8 py-4">
+                <!-- Bachelor's Degree -->
+                <div class="border-l-4 border-purple-500 pl-8 py-4 glow-border rounded-r-xl">
                     <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                         <div>
                             <h3 class="text-2xl font-bold mb-2 md:text-3xl">Bachelor's Degree in Computer Science</h3>
-                            <p class="text-lg text-gray-600 md:text-xl">IIT - University of Westminster</p>
+                            <p class="text-lg text-white/70 md:text-xl">IIT - University of Westminster</p>
                         </div>
                         <span class="text-base font-medium mt-2 md:mt-0 md:text-lg">2023 - Present</span>
                     </div>
                     <div class="space-y-2">
-                        <p class="text-gray-600 font-medium">Relevant Coursework:</p>
+                        <p class="text-white/70 font-medium">Relevant Coursework:</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-gray-100 text-sm rounded-full md:px-4 md:py-2">Client-Server Architectures</span>
-                            <span class="px-3 py-1 bg-gray-100 text-sm rounded-full md:px-4 md:py-2">Machine Learning & Data Mining</span>
-                            <span class="px-3 py-1 bg-gray-100 text-sm rounded-full md:px-4 md:py-2">Algorithms & Data Structures</span>
-                            <span class="px-3 py-1 bg-gray-100 text-sm rounded-full md:px-4 md:py-2">Database Systems</span>
-                            <span class="px-3 py-1 bg-gray-100 text-sm rounded-full md:px-4 md:py-2">Software Engineering Principles</span>
+                            <span
+                                class="px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full md:px-4 md:py-2">Client-Server
+                                Architectures</span>
+                            <span
+                                class="px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full md:px-4 md:py-2">Machine
+                                Learning & Data Mining</span>
+                            <span
+                                class="px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full md:px-4 md:py-2">Algorithms
+                                & Data Structures</span>
+                            <span
+                                class="px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full md:px-4 md:py-2">Database
+                                Systems</span>
+                            <span
+                                class="px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full md:px-4 md:py-2">Software
+                                Engineering Principles</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="border-l-4 border-gray-300 pl-8 py-4">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                <!-- GCE Advanced Level -->
+                <div class="border-l-4 border-purple-400 pl-8 py-4 glow-border rounded-r-xl">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                         <div>
-                            <h3 class="text-xl font-bold mb-2 md:text-2xl">GCE Advanced Level - Physical Science</h3>
-                            <p class="text-base text-gray-600 md:text-lg">Mathematics, Physics, Chemistry</p>
+                            <h3 class="text-2xl font-bold mb-2 md:text-3xl">GCE Advanced Level - Physical Science</h3>
+                            <p class="text-lg text-white/70 md:text-xl">Mathematics, Physics, Chemistry</p>
                         </div>
                         <span class="text-base font-medium mt-2 md:mt-0 md:text-lg">2021</span>
                     </div>
                 </div>
 
-                <div class="border-l-4 border-gray-300 pl-8 py-4">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                <!-- GCE Ordinary Level -->
+                <div class="border-l-4 border-purple-300 pl-8 py-4 glow-border rounded-r-xl">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                         <div>
-                            <h3 class="text-xl font-bold mb-2 md:text-2xl">GCE Ordinary Level</h3>
-                            <p class="text-base text-gray-600 md:text-lg">9 Subjects including Mathematics, Science, and English</p>
+                            <h3 class="text-2xl font-bold mb-2 md:text-3xl">GCE Ordinary Level</h3>
+                            <p class="text-lg text-white/70 md:text-xl">9 Subjects including Mathematics, Science, and
+                                English</p>
                         </div>
                         <span class="text-base font-medium mt-2 md:mt-0 md:text-lg">2018</span>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- References Section -->
-    <section id="references" class="py-24 px-4 bg-gray-50 md:py-32 md:px-16">
-        <div class="max-w-7xl mx-auto">
+    <section id="references" class="py-24 px-4 md:py-32 md:px-16">
+        <div class="max-w-7xl mx-auto card">
             <div class="text-center mb-16 md:mb-20">
                 <h2 class="text-5xl font-bold mb-4 md:text-6xl">REFERENCES</h2>
-                <div class="w-20 h-1 bg-black mx-auto"></div>
+                <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-purple-300 mx-auto"></div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 md:gap-12">
-                <div class="p-6 bg-white rounded-xl shadow-lg">
+                <div class="p-6 bg-white/5 border border-white/10 rounded-xl shadow-lg glow-border">
                     <h3 class="text-xl font-bold mb-2">Academic Reference</h3>
-                    <p class="text-gray-600">Mr. Guhanathan Poravi</p>
-                    <p class="text-gray-600">Senior Lecturer Grade I, Informatics Institute of Technology</p>
-                    <p class="text-gray-600">Email: guhanathan.p@iit.ac.lk</p>
-                    <p class="text-gray-600">Phone: +94-112-362-305</p>
+                    <p class="text-white/70">Mr. Guhanathan Poravi</p>
+                    <p class="text-white/70">Senior Lecturer Grade I, Informatics Institute of Technology</p>
+                    <p class="text-white/70">Email: guhanathan.p@iit.ac.lk</p>
+                    <p class="text-white/70">Phone: +94-112-362-305</p>
                 </div>
-                <div class="p-6 bg-white rounded-xl shadow-lg">
+                <div class="p-6 bg-white/5 border border-white/10 rounded-xl shadow-lg glow-border">
                     <h3 class="text-xl font-bold mb-2">Industry Reference</h3>
-                    <p class="text-gray-600">Mr. Ahsan Shamsudeen</p>
-                    <p class="text-gray-600">Senior AI Solutions Architect, H2O.ai Inc</p>
-                    <p class="text-gray-600">Email: ahsan.shamsudeen@h2o.ai</p>
-                    <p class="text-gray-600">Phone: +94-715-444-454</p>
+                    <p class="text-white/70">Mr. Ahsan Shamsudeen</p>
+                    <p class="text-white/70">Senior AI Solutions Architect, H2O.ai Inc</p>
+                    <p class="text-white/70">Email: ahsan.shamsudeen@h2o.ai</p>
+                    <p class="text-white/70">Phone: +94-715-444-454</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 px-4 bg-black text-white md:py-32 md:px-16">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-6 md:text-7xl md:mb-8">LET'S WORK<br/>TOGETHER</h2>
-            <p class="text-base text-gray-400 mb-3 md:text-xl md:mb-4">40/1 Hill Street, Colombo</p>
-            <p class="text-base text-gray-400 mb-8 md:text-xl md:mb-12">ahamedaflal100@gmail.com</p>
-            
+    <section id="contact" class="py-24 px-4 bg-[#0a0a0f] text-white md:py-32 md:px-16 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-purple-900/10 to-transparent pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <h2
+                class="text-4xl font-bold mb-6 md:text-6xl md:mb-8 bg-gradient-to-r from-white via-purple-200 to-purple-400 bg-clip-text text-transparent">
+                Let's Work<br />Together</h2>
+            <p class="text-base text-white/50 mb-3 md:text-xl md:mb-4">40/1 Hill Street, Colombo</p>
+            <p class="text-base text-white/50 mb-2 md:text-xl">ahamedaflal100@gmail.com</p>
+            <p class="text-base text-white/50 mb-8 md:text-xl md:mb-12">+94 766 153 821</p>
+
             <div class="flex justify-center gap-4 mb-8 md:gap-6 md:mb-12">
-                <a href="https://github.com/aflal123" target="_blank" class="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors md:w-14 md:h-14">
-                    <i data-lucide="github" class="w-5 h-5 md:w-6 md:h-6"></i>
+                <a href="https://github.com/aflal123" target="_blank"
+                    class="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-purple-500/20 hover:border-purple-500/30 transition-all duration-300 md:w-14 md:h-14">
+                    <i data-lucide="github" class="w-5 h-5 md:w-6 md:h-6 text-white/70"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/aflal-ahamed2002/" target="_blank" class="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors md:w-14 md:h-14">
-                    <i data-lucide="linkedin" class="w-5 h-5 md:w-6 md:h-6"></i>
+                <a href="https://www.linkedin.com/in/aflal-ahamed2002/" target="_blank"
+                    class="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-purple-500/20 hover:border-purple-500/30 transition-all duration-300 md:w-14 md:h-14">
+                    <i data-lucide="linkedin" class="w-5 h-5 md:w-6 md:h-6 text-white/70"></i>
                 </a>
-                <a href="mailto:ahamedaflal100@gmail.com" class="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors md:w-14 md:h-14">
-                    <i data-lucide="mail" class="w-5 h-5 md:w-6 md:h-6"></i>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahamedaflal100@gmail.com&su=Hello%20Aflal"
+                    target="_blank"
+                    class="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-purple-500/20 hover:border-purple-500/30 transition-all duration-300 md:w-14 md:h-14">
+                    <i data-lucide="mail" class="w-5 h-5 md:w-6 md:h-6 text-white/70"></i>
                 </a>
             </div>
 
-            <a href="mailto:ahamedaflal100@gmail.com" class="inline-block bg-white text-black px-8 py-3 rounded-full text-base font-medium hover:bg-gray-200 transition-colors md:px-12 md:py-4 md:text-lg">
-                GET IN TOUCH
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahamedaflal100@gmail.com&su=Hello%20Aflal"
+                target="_blank"
+                class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-purple-500 text-white px-8 py-3 rounded-full text-base font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all md:px-12 md:py-4 md:text-lg">
+                Book a Call
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-6 px-4 bg-black text-white border-t border-white/10 md:py-8 md:px-16">
-        <div class="max-w-7xl mx-auto text-center text-gray-400 text-sm md:text-base">
-            <p>&copy; 2024 Aflal Ahamed. All rights reserved.</p>
+    <footer class="py-8 px-4 bg-[#0a0a0f] text-white border-t border-white/5 md:py-12 md:px-16">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <!-- <div
+                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+                    <span class="text-white font-bold text-sm">A</span>
+                </div> -->
+            </div>
+            <p class="text-white/40 text-sm md:text-base">&copy; 2024 Aflal Ahamed. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#works" class="text-white/40 hover:text-white/70 text-sm transition-colors">Works</a>
+                <a href="#skills" class="text-white/40 hover:text-white/70 text-sm transition-colors">Skills</a>
+                <a href="#education" class="text-white/40 hover:text-white/70 text-sm transition-colors">Education</a>
+            </div>
         </div>
     </footer>
 
@@ -460,7 +724,189 @@
     <script src="js/main.js"></script>
     <script>
         lucide.createIcons();
+
+        // Scroll Progress Indicator
+        const scrollProgress = document.querySelector('.scroll-progress');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('opacity-0', 'translate-y-10');
+                backToTop.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                backToTop.classList.add('opacity-0', 'translate-y-10');
+                backToTop.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Generate floating particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            const particleCount = 30;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.width = (Math.random() * 3 + 2) + 'px';
+                particle.style.height = particle.style.width;
+                container.appendChild(particle);
+            }
+        }
+        createParticles();
+
+        // Superb Navbar Scroll Effects
+        const navbar = document.getElementById('navbar');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section[id]');
+
+        // Scroll effect for navbar
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Active nav link highlighting
+        function updateActiveNav() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNav);
+        window.addEventListener('load', updateActiveNav);
+
+        // Perfect Professional Code Typing Animation
+        function initTypingAnimation() {
+            const container = document.querySelector('.typing-container');
+            if (!container) return;
+
+            // Clear and prepare structure
+            container.innerHTML = '';
+            container.style.opacity = '1';
+
+            // Create elements
+            const openBracket = document.createElement('span');
+            openBracket.className = 'text-purple-400';
+            openBracket.textContent = '<';
+
+            const nameSpan = document.createElement('span');
+            nameSpan.className = 'name-text bg-gradient-to-r from-white via-purple-200 to-purple-400 bg-clip-text text-transparent';
+            nameSpan.textContent = '';
+
+            const dotSpan = document.createElement('span');
+            dotSpan.className = 'dot-text text-white/40';
+            dotSpan.textContent = '';
+
+            const lastNameSpan = document.createElement('span');
+            lastNameSpan.className = 'lastname-text bg-gradient-to-r from-purple-400 to-purple-300 bg-clip-text text-transparent';
+            lastNameSpan.textContent = '';
+
+            const closeBracket = document.createElement('span');
+            closeBracket.className = 'text-purple-400';
+            closeBracket.textContent = '';
+
+            const cursor = document.createElement('span');
+            cursor.className = 'typing-cursor';
+            cursor.textContent = '|';
+            cursor.style.cssText = 'display:inline-block;color:#A78BFA;margin-left:2px;animation:none;';
+
+            // Append elements
+            container.appendChild(openBracket);
+            container.appendChild(nameSpan);
+            container.appendChild(dotSpan);
+            container.appendChild(lastNameSpan);
+            container.appendChild(closeBracket);
+            container.appendChild(cursor);
+
+            const firstName = 'Aflal';
+            const lastName = 'Ahamed';
+            let stage = 0;
+            let i = 0;
+
+            // Typing speeds for realism (ms)
+            const getDelay = () => Math.random() * 120 + 60; // 60-180ms
+            const getPauseDelay = () => Math.random() * 200 + 100; // 100-300ms pause
+
+            function type() {
+                switch (stage) {
+                    case 0: // Type first name
+                        if (i < firstName.length) {
+                            nameSpan.textContent += firstName[i];
+                            i++;
+                            setTimeout(type, getDelay());
+                        } else {
+                            stage = 1;
+                            i = 0;
+                            setTimeout(type, getPauseDelay());
+                        }
+                        break;
+
+                    case 1: // Type dot
+                        dotSpan.textContent = '.';
+                        stage = 2;
+                        setTimeout(type, getPauseDelay());
+                        break;
+
+                    case 2: // Type last name
+                        if (i < lastName.length) {
+                            lastNameSpan.textContent += lastName[i];
+                            i++;
+                            setTimeout(type, getDelay());
+                        } else {
+                            stage = 3;
+                            setTimeout(type, getPauseDelay() * 1.5);
+                        }
+                        break;
+
+                    case 3: // Type closing bracket
+                        closeBracket.textContent = '/>';
+                        stage = 4;
+                        // Start blinking cursor
+                        cursor.style.animation = 'blink 1s step-end infinite';
+                        break;
+                }
+            }
+
+            // Start after brief delay
+            setTimeout(type, 600);
+        }
+
+        // Initialize
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initTypingAnimation);
+        } else {
+            initTypingAnimation();
+        }
     </script>
 
 </body>
+
 </html>
