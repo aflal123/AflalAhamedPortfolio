@@ -1,13 +1,14 @@
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-4 md:py-32 md:px-16">
+    <section id="skills" className="py-24 px-6 md:py-32 md:px-16">
       <div className="max-w-7xl mx-auto">
 
-        {/* Header */}
+        {/* Double heading */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-4 md:text-6xl">SKILLS</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-purple-300 mx-auto mb-8"></div>
-          <p className="text-white/60 max-w-2xl mx-auto text-base">
+          <h2 className="text-5xl font-black text-teal-400 md:text-6xl leading-none uppercase">Skills</h2>
+          <h2 className="text-5xl font-black text-teal-400/[0.07] md:text-6xl leading-none -mt-3 uppercase" aria-hidden="true">Skills</h2>
+          <div className="w-10 h-0.5 bg-teal-400 mx-auto mt-5 mb-6" />
+          <p className="text-white/45 max-w-2xl mx-auto text-base">
             Technologies and tools I use to bring ideas to life. Always learning, always building.
           </p>
         </div>
@@ -15,20 +16,19 @@ export default function Skills() {
         {/* Programming Languages */}
         <div className="mb-12">
           <div className="flex items-center gap-4 mb-8">
-            <div className="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-purple-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <div className="w-12 h-12 rounded-xl bg-teal-500/15 border border-teal-500/25 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-teal-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
               </svg>
             </div>
             <div>
               <h3 className="text-xl font-bold">Programming Languages</h3>
-              <p className="text-white/50 text-sm">Core languages I work with daily</p>
+              <p className="text-white/40 text-sm">Core languages I work with daily</p>
             </div>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
 
-            {/* JavaScript */}
             <div className="skill-card-premium">
               <div className="premium-icon-wrap">
                 <svg viewBox="0 0 32 32" className="w-10 h-10" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +39,6 @@ export default function Skills() {
               <span className="skill-label">JavaScript</span>
             </div>
 
-            {/* Python */}
             <div className="skill-card-premium">
               <div className="premium-icon-wrap">
                 <svg viewBox="0 0 32 32" className="w-10 h-10" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +49,6 @@ export default function Skills() {
               <span className="skill-label">Python</span>
             </div>
 
-            {/* Java */}
             <div className="skill-card-premium">
               <div className="premium-icon-wrap">
                 <svg viewBox="0 0 32 32" className="w-10 h-10" xmlns="http://www.w3.org/2000/svg">
@@ -63,7 +61,6 @@ export default function Skills() {
               <span className="skill-label">Java</span>
             </div>
 
-            {/* SQL */}
             <div className="skill-card-premium">
               <div className="premium-icon-wrap">
                 <svg viewBox="0 0 32 32" className="w-10 h-10" xmlns="http://www.w3.org/2000/svg">
@@ -76,7 +73,6 @@ export default function Skills() {
               <span className="skill-label">SQL</span>
             </div>
 
-            {/* Node.js */}
             <div className="skill-card-premium">
               <div className="premium-icon-wrap">
                 <svg viewBox="0 0 32 32" className="w-10 h-10" xmlns="http://www.w3.org/2000/svg">
@@ -88,7 +84,6 @@ export default function Skills() {
               <span className="skill-label">Node.js</span>
             </div>
 
-            {/* React */}
             <div className="skill-card-premium">
               <div className="premium-icon-wrap">
                 <svg viewBox="0 0 32 32" className="w-10 h-10" xmlns="http://www.w3.org/2000/svg">
@@ -109,17 +104,16 @@ export default function Skills() {
         {/* Skill Grid Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-          {/* Frontend */}
           <div className="skill-grid-card glow-border">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="w-12 h-12 rounded-xl bg-teal-500/15 border border-teal-500/25 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
                 </svg>
               </div>
               <h4 className="text-lg font-semibold">Frontend</h4>
             </div>
-            <p className="text-white/60 text-sm mb-4">Building responsive, interactive web applications with modern frameworks and tools.</p>
+            <p className="text-white/50 text-sm mb-4">Building responsive, interactive web applications with modern frameworks and tools.</p>
             <div className="flex flex-wrap gap-2">
               {["React", "Next.js", "Tailwind CSS", "HTML5", "CSS3", "Bootstrap"].map((tag) => (
                 <span key={tag} className="tech-tag">{tag}</span>
@@ -127,17 +121,16 @@ export default function Skills() {
             </div>
           </div>
 
-          {/* Backend */}
           <div className="skill-grid-card glow-border">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-purple-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="w-12 h-12 rounded-xl bg-teal-500/15 border border-teal-500/25 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-teal-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
                 </svg>
               </div>
               <h4 className="text-lg font-semibold">Backend</h4>
             </div>
-            <p className="text-white/60 text-sm mb-4">Developing robust APIs and server-side applications with scalable architecture.</p>
+            <p className="text-white/50 text-sm mb-4">Developing robust APIs and server-side applications with scalable architecture.</p>
             <div className="flex flex-wrap gap-2">
               {["Node.js", "Express.js", "Spring Boot", "REST API", "GraphQL"].map((tag) => (
                 <span key={tag} className="tech-tag">{tag}</span>
@@ -145,17 +138,16 @@ export default function Skills() {
             </div>
           </div>
 
-          {/* Database */}
           <div className="skill-grid-card glow-border">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="w-12 h-12 rounded-xl bg-teal-500/15 border border-teal-500/25 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4 7c0-1.657 3.582-3 8-3s8 1.343 8 3M4 7v5c0 1.657 3.582 3 8 3s8-1.343 8-3V7M4 7v5m16-5v5M4 17v-5m16 5v-5m0 5c0 1.657-3.582 3-8 3s-8-1.343-8-3" />
                 </svg>
               </div>
               <h4 className="text-lg font-semibold">Database</h4>
             </div>
-            <p className="text-white/60 text-sm mb-4">Designing and managing both SQL and NoSQL databases for optimal performance.</p>
+            <p className="text-white/50 text-sm mb-4">Designing and managing both SQL and NoSQL databases for optimal performance.</p>
             <div className="flex flex-wrap gap-2">
               {["MongoDB", "MySQL", "PostgreSQL", "Redis"].map((tag) => (
                 <span key={tag} className="tech-tag">{tag}</span>
@@ -163,17 +155,16 @@ export default function Skills() {
             </div>
           </div>
 
-          {/* Machine Learning */}
           <div className="skill-grid-card glow-border">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="w-12 h-12 rounded-xl bg-teal-500/15 border border-teal-500/25 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2" />
                 </svg>
               </div>
               <h4 className="text-lg font-semibold">Machine Learning</h4>
             </div>
-            <p className="text-white/60 text-sm mb-4">Implementing ML algorithms and data analysis for intelligent applications.</p>
+            <p className="text-white/50 text-sm mb-4">Implementing ML algorithms and data analysis for intelligent applications.</p>
             <div className="flex flex-wrap gap-2">
               {["scikit-learn", "Pandas", "NumPy", "Matplotlib", "TensorFlow"].map((tag) => (
                 <span key={tag} className="tech-tag">{tag}</span>
@@ -181,18 +172,17 @@ export default function Skills() {
             </div>
           </div>
 
-          {/* Tools & DevOps */}
           <div className="skill-grid-card glow-border">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-purple-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="w-12 h-12 rounded-xl bg-teal-500/15 border border-teal-500/25 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-teal-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
               <h4 className="text-lg font-semibold">Tools & DevOps</h4>
             </div>
-            <p className="text-white/60 text-sm mb-4">Using industry-standard tools for version control, deployment, and collaboration.</p>
+            <p className="text-white/50 text-sm mb-4">Using industry-standard tools for version control, deployment, and collaboration.</p>
             <div className="flex flex-wrap gap-2">
               {["Git", "GitHub", "Docker", "AWS", "Postman", "VS Code"].map((tag) => (
                 <span key={tag} className="tech-tag">{tag}</span>
@@ -200,17 +190,16 @@ export default function Skills() {
             </div>
           </div>
 
-          {/* Testing */}
           <div className="skill-grid-card glow-border">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="w-12 h-12 rounded-xl bg-teal-500/15 border border-teal-500/25 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <h4 className="text-lg font-semibold">Testing</h4>
             </div>
-            <p className="text-white/60 text-sm mb-4">Ensuring code quality through comprehensive testing methodologies.</p>
+            <p className="text-white/50 text-sm mb-4">Ensuring code quality through comprehensive testing methodologies.</p>
             <div className="flex flex-wrap gap-2">
               {["JUnit", "Jest", "Selenium", "Cypress"].map((tag) => (
                 <span key={tag} className="tech-tag">{tag}</span>
