@@ -72,6 +72,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://aflal.me",
   },
+  verification: {
+    google: "8pNlcA43qkIlwGP-L-ZMl_VtqZCmLRnbvJVv7Ho62Bc",
+  },
 };
 
 const jsonLd = {
