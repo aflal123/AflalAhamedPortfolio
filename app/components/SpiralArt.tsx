@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 
+
 const ICONS = [
   {
     name: "JavaScript",
@@ -102,10 +103,10 @@ const ICONS = [
 ];
 
 const ORBIT_DURATION = 28;
-const ORBIT_RADIUS = 265;
 
 export default function SpiralArt() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -210,10 +211,33 @@ export default function SpiralArt() {
     return () => cancelAnimationFrame(animFrame);
   }, []);
 
+  // Dynamically update orbit radius based on container width
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const updateRadius = (width: number) => {
+      // Orbit at 43% of container width — matches 260px at 600px container
+      const r = Math.round(width * 0.43);
+      container.style.setProperty("--orbit-r", `${r}px`);
+    };
+
+    // Set on mount
+    updateRadius(container.offsetWidth);
+
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        updateRadius(entry.contentRect.width);
+      }
+    });
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
+
   const N = ICONS.length;
 
   return (
-    <div className="relative w-full max-w-[600px] mx-auto aspect-square">
+    <div ref={containerRef} className="relative w-full max-w-[600px] mx-auto aspect-square">
 
       {/* Canvas — inset 40px so icons can sit just outside the spiral */}
       <div className="absolute inset-[40px]">

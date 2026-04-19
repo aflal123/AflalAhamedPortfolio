@@ -148,10 +148,10 @@ body::before {
 }
 .scroll-indicator { animation: bounce-fade 2.2s ease-in-out infinite; }
 
-/* Orbiting icon animation */
+/* Orbiting icon animation — radius set dynamically via --orbit-r */
 @keyframes icon-orbit {
-  0%   { transform: rotate(0deg)   translateX(260px) rotate(0deg); }
-  100% { transform: rotate(360deg) translateX(260px) rotate(-360deg); }
+  0%   { transform: rotate(0deg)   translateX(var(--orbit-r, 260px)) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(var(--orbit-r, 260px)) rotate(-360deg); }
 }
 
 /* Teal button glow */
