@@ -26,6 +26,7 @@ const projects = [
     tech: "Next.js, Tailwind CSS, TypeScript",
     github: "https://github.com/aflal123/Late90s-ecommerce",
     live: "https://www.late90s.online",
+    image: "/projects/late90s.png",
   },
   {
     title: "LogicPath — Landing Page",
