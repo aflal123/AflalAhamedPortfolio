@@ -1,4 +1,16 @@
+import Image from "next/image";
+
 const projects = [
+  {
+    title: "ProspectIQ — AI-Driven CRM",
+    description:
+      "A premium, full-stack CRM empowering sales teams with intelligent lead management and AI-driven insights. Features GPT-4o powered lead scoring, sentiment analysis, and a sleek, modern dashboard.",
+    tech: "React, Vite, Node.js, Express.js, MongoDB, OpenAI GPT-4o, JWT, Resend",
+    github: "https://github.com/aflal123/ProspectIq-crm.git",
+    live: "https://prospectiq.online",
+    image: "/projects/prospectiq.png",
+    featured: true,
+  },
   {
     title: "SmartBiz ERP",
     description:
@@ -89,13 +101,37 @@ export default function Projects() {
           {projects.map((project, idx) => (
             <div
               key={project.title}
-              className="rounded-3xl bg-white/[0.03] border border-white/[0.07] p-6 glow-border hover:-translate-y-2 transition-transform duration-300 flex flex-col"
+              className={`rounded-3xl bg-white/${project.featured ? " [0.05]" : "[0.03]"} border ${project.featured ? "border-teal-400/30" : "border-white/[0.07]"} overflow-hidden glow-border hover:-translate-y-2 transition-transform duration-300 flex flex-col relative`}
             >
-              <div className="flex items-start justify-between mb-3">
-                <span className="font-mono text-xs text-teal-400/50 font-bold">
-                  {String(idx + 1).padStart(2, "0")}
-                </span>
-              </div>
+              {project.image ? (
+                <div className="relative h-64 w-full">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
+                  />
+                </div>
+              ) : (
+                <div className="h-64 w-full bg-teal-400/5 flex items-center justify-center border-b border-white/[0.07]">
+                  <span className="text-teal-400/20 font-black text-4xl">PROJ</span>
+                </div>
+              )}
+
+              {project.featured && (
+                <div className="absolute top-0 right-0 z-10">
+                  <div className="bg-teal-500 text-black text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+                    Featured
+                  </div>
+                </div>
+              )}
+
+              <div className="p-6 flex flex-col flex-1">
+                <div className="flex items-start justify-between mb-3">
+                  <span className="font-mono text-xs text-teal-400/50 font-bold">
+                    {String(idx + 1).padStart(2, "0")}
+                  </span>
+                </div>
 
               <h3 className="text-base font-bold uppercase leading-tight mb-3 text-white">
                 {project.title}
@@ -134,6 +170,7 @@ export default function Projects() {
               </div>
 
               <div className="h-px bg-gradient-to-r from-teal-500/60 to-teal-300/20 mt-4" />
+              </div>
             </div>
           ))}
         </div>
