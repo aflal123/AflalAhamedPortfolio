@@ -7,7 +7,7 @@ const projects = [
       "A premium, full-stack CRM empowering sales teams with intelligent lead management and AI-driven insights. Features GPT-4o powered lead scoring, sentiment analysis, and a sleek, modern dashboard.",
     tech: "React, Vite, Node.js, Express.js, MongoDB, OpenAI GPT-4o, JWT, Resend",
     github: "https://github.com/aflal123/ProspectIq-crm.git",
-    live: "https://prospectiq.online",
+    live: "https://www.prospectiq.online",
     image: "/projects/prospectiq.png",
     featured: true,
   },
@@ -134,43 +134,43 @@ export default function Projects() {
                   </span>
                 </div>
 
-              <h3 className="text-base font-bold uppercase leading-tight mb-3 text-white">
-                {project.title}
-              </h3>
+                <h3 className="text-base font-bold uppercase leading-tight mb-3 text-white">
+                  {project.title}
+                </h3>
 
-              <p className="text-white/50 text-sm mb-4 leading-relaxed flex-1">
-                {project.description}
-              </p>
+                <p className="text-white/50 text-sm mb-4 leading-relaxed flex-1">
+                  {project.description}
+                </p>
 
-              <p className="text-teal-400/70 text-xs font-medium mb-2">Tech Stack</p>
-              <div className="flex flex-wrap gap-1.5 mb-4">
-                {project.tech.split(", ").map((t) => (
-                  <span key={t} className="tech-tag">{t}</span>
-                ))}
-              </div>
+                <p className="text-teal-400/70 text-xs font-medium mb-2">Tech Stack</p>
+                <div className="flex flex-wrap gap-1.5 mb-4">
+                  {project.tech.split(", ").map((t) => (
+                    <span key={t} className="tech-tag">{t}</span>
+                  ))}
+                </div>
 
-              <div className="flex flex-wrap gap-3 mt-auto pt-2">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-glow inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300"
-                >
-                  GitHub
-                </a>
-                {project.live && (
+                <div className="flex flex-wrap gap-3 mt-auto pt-2">
                   <a
-                    href={project.live}
+                    href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 border border-teal-400/25 hover:border-teal-400/50 hover:bg-teal-400/5 text-white/80 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300"
+                    className="btn-glow inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300"
                   >
-                    Live Demo
+                    GitHub
                   </a>
-                )}
-              </div>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 border border-teal-400/25 hover:border-teal-400/50 hover:bg-teal-400/5 text-white/80 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300"
+                    >
+                      Live Demo
+                    </a>
+                  )}
+                </div>
 
-              <div className="h-px bg-gradient-to-r from-teal-500/60 to-teal-300/20 mt-4" />
+                <div className="h-px bg-gradient-to-r from-teal-500/60 to-teal-300/20 mt-4" />
               </div>
             </div>
           ))}
