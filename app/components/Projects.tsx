@@ -12,12 +12,12 @@ const projects = [
     featured: true,
   },
   {
-    title: "SmartBiz ERP — Cloud POS & Retail Suite",
+    title: "SmartBiz ERP — Multi-Tenant Cloud POS & ERP",
     description:
-      "All-in-one cloud business management suite for SMEs unifying barcode POS billing, automated FIFO inventory tracking, customer credit ledgers, supplier purchase orders, and daily P&L accounting, powered by an OpenAI copilot for business intelligence.",
-    tech: "Node.js, Express.js, MySQL, Sequelize ORM, React, React Native, OpenAI, AWS EC2",
+      "Production-ready, multi-tenant POS & ERP suite for SMEs unifying barcode billing, FIFO inventory tracking, customer credit ledgers, supplier orders, and daily P&L accounting with atomic Prisma transactions and OpenAI intelligence.",
+    tech: "Next.js 16, React 19, TypeScript, Tailwind CSS v4, PostgreSQL, Prisma ORM, Supabase, Vitest, OpenAI API",
     github: "https://github.com/aflal123/smartbiz",
-    live: "https://www.smartbizerp.online",
+    live: "https://smartbiz-erp.vercel.app",
     image: "/projects/smartbiz.png",
     featured: true,
   },
