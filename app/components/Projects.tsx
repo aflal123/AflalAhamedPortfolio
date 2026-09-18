@@ -22,16 +22,6 @@ const projects = [
     featured: true,
   },
   {
-    title: "JobBook — Full-Stack Career & Talent Platform",
-    description:
-      "Full-stack career matching ecosystem unifying 4 user roles (Job Seekers, Employers, Trainers, Admins). Powered by 20 serverless Next.js REST API routes, Neon Serverless PostgreSQL, Prisma ORM, and JWT authentication.",
-    tech: "Next.js 16, React 19, TypeScript, PostgreSQL, Prisma ORM, JWT, REST APIs, Vercel",
-    github: "https://github.com/aflal123/job-seeking-platform",
-    live: null,
-    image: null,
-    featured: true,
-  },
-  {
     title: "Late90s — Online Clothing Store",
     description:
       "Built a Sri Lankan streetwear e-commerce platform with product listings, category browsing, customer reviews and WhatsApp-based ordering system. Islandwide delivery.",
@@ -39,6 +29,16 @@ const projects = [
     github: "https://github.com/aflal123/Late90s-ecommerce",
     live: "https://www.late90s.online",
     image: "/projects/late90s.png",
+  },
+  {
+    title: "JobBook — Full-Stack Career & Talent Platform",
+    description:
+      "Full-stack career matching ecosystem unifying 4 user roles (Job Seekers, Employers, Trainers, Admins). Powered by 20 serverless Next.js REST API routes, Neon Serverless PostgreSQL, Prisma ORM, and JWT authentication.",
+    tech: "Next.js 16, React 19, TypeScript, PostgreSQL, Prisma ORM, JWT, REST APIs, Vercel",
+    github: "https://github.com/aflal123/job-seeking-platform",
+    live: "https://job-seeking-platform-five.vercel.app",
+    image: "/projects/jobbook.png",
+    featured: true,
   },
   {
     title: "LogicPath — Landing Page",
