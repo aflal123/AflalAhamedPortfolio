@@ -115,7 +115,7 @@ export default function Skills() {
             </div>
             <p className="text-white/50 text-sm mb-4">Building responsive, interactive web applications with modern frameworks and tools.</p>
             <div className="flex flex-wrap gap-2">
-              {["React", "Next.js", "Tailwind CSS", "HTML5", "CSS3", "Bootstrap"].map((tag) => (
+              {["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML5", "CSS3"].map((tag) => (
                 <span key={tag} className="tech-tag">{tag}</span>
               ))}
             </div>
@@ -132,7 +132,7 @@ export default function Skills() {
             </div>
             <p className="text-white/50 text-sm mb-4">Developing robust APIs and server-side applications with scalable architecture.</p>
             <div className="flex flex-wrap gap-2">
-              {["Node.js", "Express.js", "Spring Boot", "REST API", "GraphQL"].map((tag) => (
+              {["Node.js", "Express.js", "Prisma ORM", "Spring Boot", "REST API"].map((tag) => (
                 <span key={tag} className="tech-tag">{tag}</span>
               ))}
             </div>
@@ -149,7 +149,7 @@ export default function Skills() {
             </div>
             <p className="text-white/50 text-sm mb-4">Designing and managing both SQL and NoSQL databases for optimal performance.</p>
             <div className="flex flex-wrap gap-2">
-              {["MongoDB", "MySQL", "PostgreSQL", "Redis"].map((tag) => (
+              {["PostgreSQL", "Supabase", "MongoDB", "MySQL", "Redis"].map((tag) => (
                 <span key={tag} className="tech-tag">{tag}</span>
               ))}
             </div>
@@ -184,7 +184,7 @@ export default function Skills() {
             </div>
             <p className="text-white/50 text-sm mb-4">Using industry-standard tools for version control, deployment, and collaboration.</p>
             <div className="flex flex-wrap gap-2">
-              {["Git", "GitHub", "Docker", "AWS", "Postman", "VS Code"].map((tag) => (
+              {["Git", "GitHub", "Vercel", "Docker", "AWS", "Postman"].map((tag) => (
                 <span key={tag} className="tech-tag">{tag}</span>
               ))}
             </div>
@@ -201,7 +201,7 @@ export default function Skills() {
             </div>
             <p className="text-white/50 text-sm mb-4">Ensuring code quality through comprehensive testing methodologies.</p>
             <div className="flex flex-wrap gap-2">
-              {["JUnit", "Jest", "Selenium", "Cypress"].map((tag) => (
+              {["Vitest", "Jest", "Cypress", "JUnit"].map((tag) => (
                 <span key={tag} className="tech-tag">{tag}</span>
               ))}
             </div>
